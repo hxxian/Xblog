@@ -1,0 +1,162 @@
+body {
+	background-color: #f8f8f8;
+}
+/* 顶部导航start */
+
+.nav-top {
+	width: 100%;
+	height: 100px;
+	background-color: #414141;
+	margin-bottom: 50px;
+}
+
+/* 顶部导航end */
+
+.main-content {
+	width: 100%;
+	min-height: 800px;
+}
+
+/* 左侧内容start */
+
+.content-left {
+	margin-left: 100px;
+}
+
+.line {
+	height: 1px;
+	width: 80%;
+	background-color: #e1e7ec;
+}
+
+.left-item {
+	border: 1px solid #e1e7ec;
+	margin-bottom: 30px;
+}
+
+.article-desc {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.article-desc img {
+	width: 88px;
+	height: 88px;
+	margin-top: 30px;
+}
+
+.username {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.counter {
+	width: 70%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.counter-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.counter-item .title {
+	
+}
+
+.counter-item .number {
+	font-weight: bold;
+	color: #000000;
+}
+
+.article-classify {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding-top: 15px;
+}
+
+.classify-item {
+	margin-top: 12px;
+	margin-bottom: 15px;
+}
+
+.classify-item img {
+	width: 60px;
+	height: 60px;
+}
+
+.classify-title {
+	margin-left: 20px;
+}
+
+.classify-tag {
+	font-size: 16px;
+}
+
+.classify-title p {
+	color: #a594b8;
+}
+/* 左侧内容end */
+
+/* 右侧内容start */
+
+.content-right {
+	margin-left: 30px;
+	margin-bottom: 5px;
+}
+
+.right-item {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	border: 1px solid #e1e7ec;
+	margin-bottom: 10px;
+	padding: 30px 40px;
+}
+
+.right-item .title {
+	font-size: 28px;
+	color: #09b0e1;
+}
+
+.right-item .info {
+	color: #8989a4;
+}
+
+.right-item .segment-line {
+	height: 10px;
+	width: 1px;
+	background-color: #e1e7ec;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.right-item .article-degist {
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.right-item .tag-item {
+	background-color: #FFFFFF;
+	border: 1px solid #ff4c09;
+	border-radius: 15px;
+	padding: 2px 6px;
+	color: #ff4c09;
+	margin-right: 8px;
+	font-size: 12px;
+}
+
+/* 右侧内容end */

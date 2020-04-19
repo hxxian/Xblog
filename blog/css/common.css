@@ -1,0 +1,139 @@
+.container-fluid {
+	padding: 0px;
+	margin: 0px;
+}
+
+/* 页头 */
+.nav-top {
+}
+
+.none {
+	height: 0;
+}
+
+.nav-top-show {
+	height: 64px;
+	width: 100%;
+	background-color: #414141;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	animation: fade-in 1s ease;
+	animation-fill-mode: forwards;
+}
+
+.nav-top-hide {
+	height: 64px;
+	width: 100%;
+	background-color: #414141;
+	position: fixed;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	animation: fade-out 1s ease;
+	animation-fill-mode: forwards;
+}
+
+/* 导航栏logo */
+.logo-img {
+	height: 40px;
+	margin-left: 200px;
+}
+
+/* 导航栏菜单 */
+.menu {
+	height: 100%;
+	display: flex;
+	flex-direction: row
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-item {
+	color: #FFFFFF;
+	font-size: 15px;
+	margin-left: 35px;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-item span.selected {
+	height: 2px;
+	width: 100%;
+	background-color: #FFFFFF;
+	margin-top: 4px;
+}
+
+.menu-item:hover {
+	cursor: pointer;
+	font-weight: bold;
+	color: #EEA236;
+}
+
+/* 页脚 */
+.nav-footer {
+	width: 100%;
+	height: 150px;
+	background-color: #121212;
+	margin-top: 50px;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.flex-center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-center {
+	justify-content: center;
+}
+
+.content-start {
+	justify-content: flex-start;
+}
+
+.content-end {
+	justify-content: flex-end;
+}
+
+.content-around {
+	justify-content: space-around;
+}
+
+.content-between {
+	justify-content: space-between;
+}
+
+
+.hide {
+	opacity: 0;
+}
+
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 36px;
+}

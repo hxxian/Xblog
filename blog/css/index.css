@@ -1,0 +1,348 @@
+.screen-content {
+	height: 640px;
+	width: 100%;
+	border-bottom: 1px dashed #cccccc;
+	background-image: url(../img/monster_and_girl.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+}
+
+.blog-title {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	margin-left: 150px;
+	padding-bottom: 80px;
+}
+
+.blog-tag span {
+	font-size: 20px;
+	color: #FFFFFF;
+}
+
+.blog-name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.blog-name span {
+	font-size: 48px;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-family: simhei;
+}
+
+.blog-desc span {
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.title-line {
+	height: 4px;
+	background-color: #269ABC;
+	width: 80px;
+	border-bottom: #009ABB;
+	margin-bottom: 16px;
+}
+
+.avatar-container {
+	width: 100%;
+	position: absolute;
+	top: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.avatar-box {
+	width: 108px;
+	height: 108px;
+	border-radius: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+
+.avatar-box img {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+
+.search-container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+}
+
+.search-content {
+	height: 70px;
+	width: 400px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-container input {
+	border-radius: 30px;
+	background-color: rgba(0, 0, 0, 0.7);
+	color: #FFFFFF;
+	border: #000000;
+}
+
+.search-container span {
+	font-size: 20px;
+	/* margin-left: -32px; */
+}
+
+.contact-box {
+	width: 400px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.contact-item {
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 100%;
+	padding: 4px;
+	margin-right: 14px;
+}
+
+.contact-item img {
+	width: 28px;
+	height: 28px;
+}
+
+/* 主题内容样式start */
+.main-content {
+	width: 100%;
+	min-height: 1200px;
+	/* background-color: #f8f8f8; */
+	padding-top: 70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.content-left, .content-right {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	
+}
+
+.left-item {
+	margin-left: 70px;
+	padding: 0px;
+	position: relative;
+}
+
+.left-item:hover {
+	box-shadow: 1px 3px 3px #666666;
+}
+
+.right-item {
+	margin-right: 30px;
+	padding-left: 18px;
+	padding-right: 18px;
+}
+
+.right-item:hover {
+	box-shadow: 1px 3px 3px #666666;
+}
+
+.left-item, .right-item {
+	border: 1px solid #CCCCCC;
+	background-color: #FFFFFF;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.right-item .line {
+	height: 1px;
+	width: 100%;
+	border-bottom: 1px dashed #CCCCCC;
+	margin-top: 50px;
+	position: relative;
+}
+
+.right-item .title {
+	background: #FFFFFF;
+	position: relative;
+	top: -10px;
+	z-index: 1;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+}
+
+.icon-container {
+	width: 80%;
+	height: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.icon-container img{
+	width: 35px;
+}
+
+.left-item .latest-tag {
+	font-style: italic; 
+	color: #617c58;
+	margin-top: 45px;
+}
+
+.left-item .line {
+	height: 1px;
+	width: 100%;
+	border-bottom: 1px dashed #CCCCCC;
+	position: absolute;
+	top: 30px;
+}
+
+.left-item .title {
+	background: #FFFFFF;
+	z-index: 1;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	position: absolute;
+	top: 20px;
+	letter-spacing: 3px;
+}
+
+.left-item .article-title {
+	width: 100%;
+	text-align: center;
+	margin-top: 56px;
+	color: #222222;
+	font-family: 'Merriweather', serif;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.left-item .artile-tag {
+	width: 50%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.left-item .artile-tag span {
+	margin-left: 8px;
+	font-size: 14px;
+	color: #555555;
+	letter-spacing: .1em;
+	font-weight: 400;
+}
+
+.left-item .artile-tag span.glyphicon {
+	margin-left: 30px;
+}
+
+span.tag-content {
+	font-family: 'Merriweather', serif;
+}
+
+.left-item .article-content {
+	width: 80%;
+	margin-top: 40px;
+	font-weight: 300;
+	line-height: 28px;
+	font-size: 15px;
+	color: #000000;
+	font-family: 'Merriweather', serif;
+}
+
+.left-item .btn_more {
+	width: 175px;
+	height: 40px;
+	background-color: #617c58;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 40px;
+	font-size: 15px;
+	font-family: 'Merriweather', serif;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.left-item-title-box {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.blog-activity {
+	height: 300px;
+	margin-top: 50px;
+}
+
+.activity-items {
+	margin-top: 40px;
+	padding-top: 20px;
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.week-items, .week-tags {
+	height: 200px;
+	margin-left: 6px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.week-tag {
+	font-size: 8px;
+	color: #868686;
+	margin-top: 3px;
+	height: 20px;
+	margin-right: 4px;
+}
+
+.week-items .day-item {
+	width: 16px;
+	height: 16px;
+	margin-top: 6px;
+	background-color: #ebedf0;
+}
+
+.activity-color-tip {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 40px;
+}
+
+.color-tip-item {
+	width: 15px;
+	height: 15px;
+	background-color: #ebedf0;
+	margin-left: 4px;
+}
+
+/* 主题内容样式end */

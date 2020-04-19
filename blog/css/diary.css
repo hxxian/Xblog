@@ -1,0 +1,100 @@
+/* 顶部导航start */
+
+.nav-top {
+	width: 100%;
+	height: 100px;
+	background-color: #414141;
+}
+
+/* 顶部导航end */
+
+.main-content {
+	width: 100%;
+	/* min-height: 800px; */
+	background-color: #FFFFFF;
+}
+
+/* 主体内容样式 */
+.preview-mode {
+}
+
+.preview-mode .diary-item {
+	height: 440px;
+	margin-top: 55px;
+}
+
+.diary-item .item-left {
+	background-color: #3eaabf;
+	height: 100%;
+	display: relative;
+}
+
+.diary-item .item-right {
+	background-color: #f3f1f1;
+	height: 100%;
+	border: 1px solid #e6e3e3;
+}
+
+.diary-item .item-right .diary-text-box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	padding-left: 90px;
+	padding-right: 135px;
+}
+
+.more-btn {
+	width: 140px;
+	height: 45px;
+	border: 2px solid #3eaabf;
+	text-align: center;
+	line-height: 45px;
+	color: #60b7c8;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+.diary-text-box .title {
+	color: #444444;
+	font-size: 2.5em;
+	margin-bottom: 10px;
+	font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.diary-text-box .detail {
+	margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.9em;
+	color: #777777;
+}
+
+.preview-mode .diary-cover-img {
+	position: relative;
+	left: -50px;
+	top: 22px;
+	
+}
+
+.preview-mode .diary-cover-img img {
+	width: 420px;
+	height: 290px;
+	box-shadow: 0px 1px 4px #000
+}
+
+.preview-mode .diary-cover-img .diary-date {
+	font-family: 'Playfair Display', serif;
+	color: #FFFFFF;
+	font-size: 0.85rem;
+	position: relative;
+	left: 30px;
+	top: 250px;
+	font-weight: 600;
+}
+
+.time-line-mode {
+	margin-top: 30px;
+}

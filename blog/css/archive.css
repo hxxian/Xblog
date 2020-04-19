@@ -1,0 +1,123 @@
+.screen-content {
+	height: 640px;
+	width: 100%;
+	border-bottom: 1px dashed #cccccc;
+	background-image: url(../img/2000.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	position: relative;
+}
+
+.blog-title {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	margin-left: 150px;
+	padding-bottom: 80px;
+}
+
+.blog-name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.blog-name span {
+	font-size: 48px;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-family: simhei;
+}
+
+.title-line {
+	height: 4px;
+	background-color: #269ABC;
+	width: 80px;
+	border-bottom: #009ABB;
+	margin-bottom: 16px;
+}
+
+/* 主题内容 */
+.main-content {
+	width: 100%;
+	min-height: 1200px;
+	padding-top: 70px;
+}
+
+.update-content-container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.update-month-item {
+	border-left: 1px solid #00313C;
+	position: relative;
+	margin-bottom: 100px;
+}
+
+.archive-month-tag {
+	display: inline-block;
+	margin-left: -180px;
+	position: absolute;
+	top: 30px;
+}
+
+.archive-month-tag span {
+	font-size: 20px;
+	font-weight: bolder;
+	color: #009ABB;
+	letter-spacing: 2px;
+}
+
+.tag-header-icon {
+	background-color: #FFFFFF;
+	width: 14px;
+	height: 14px;
+	position: absolute;
+	top: 40px;
+	left: -8px;
+	border-radius: 50%;
+	border: 1px solid #d4d3d3;
+}
+
+.update-day-list {
+	margin-top: 32px;
+}
+
+.update-day-item {
+	width: 100%;
+	height: 42px;
+	display: flex;
+	flex-direction: row;
+	margin-top: 20px;
+}
+
+.update-day-item .item-left {
+	height: 100%;
+	border: 1px solid #d4d3d3;
+	box-sizing: border-box;
+	padding: 10px 18px;
+	margin-left: 20px;
+	color: #666666;
+}
+
+.update-day-item .item-left:hover {
+	border: 1px solid #009ABB;
+	color: #009ABB;
+	cursor: pointer;
+}
+
+.update-day-item .item-right {
+	flex: 1;
+}
+
+.update-day-item span {
+	letter-spacing: 3px;
+}
