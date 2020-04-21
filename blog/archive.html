@@ -11,20 +11,13 @@
 		<!-- 项目css -->
 		<link rel="stylesheet" type="text/css" href="css/common.css" />
 		<link rel="stylesheet" type="text/css" href="css/archive.css" />
+		<link rel="stylesheet" type="text/css" href="css/anim.css"/>
 		<title>归档</title>
 	</head>
 	<body>
-		<div class="container-fluid">
+		<div class="container-fluid" id="bloger">
 			<!-- 顶部导航 -->
-			<div class="nav-top">
-				<!-- 菜单栏 -->
-				<div class="menu col-lg-8">
-					<span class="menu-item">首页</span>
-					<span class="menu-item">技术博客</span>
-					<span class="menu-item">读书记</span>
-					<span class="menu-item">个人简介</span>
-				</div>
-			</div>
+			<nav-menu></nav-menu>
 
 			<div class="screen-content">
 				<!-- 标题内容 -->
@@ -96,5 +89,7 @@
 		<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- 项目js -->
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

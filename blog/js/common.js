@@ -1,6 +1,10 @@
-$(function() {
+// import nav - menu from '../components/nav-menu'
 
+
+$(function() {
+	
 	navTopHideAndScrollShow();
+	
 })
 
 function navTopHideAndScrollShow() {

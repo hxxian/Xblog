@@ -2,9 +2,9 @@
 	height: 640px;
 	width: 100%;
 	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/about-me.jpg);
+	background-image: url(../img/younth.jpg);
 	background-repeat: no-repeat;
-	/* background-position: center; */
+	background-position: bottom;
 	position: relative;
 }
 
@@ -45,30 +45,132 @@
 
 /* 主体内容 */
 .main-content {
-	height: 500px;
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .about-content {
-	height: 500px;
+	min-height: 500px;
+	width: 850px;
 }
 
 .about-item-title {
 	font-size: 30px;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 100px;
 	display: block;
 }
 
 .about-items {
 	margin-top: 24px;
-	border-left: 10px solid #CCCCCC;
+	border-left: 10px solid #b2697d;
 	padding: 10px 10px 0px 20px;
+	box-sizing: border-box;
 }
 
 .about-items p {
 	font-size: 15px;
 	margin-bottom: 6px;
+}
+
+/* 评论部分 */
+.comment-container {
+	width: 850px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.comment-container img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+
+.comment-send-box {
+	display: flex;
+	flex-direction: row;
+}
+
+.comment-inputs {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 15px;
+}
+
+.comment-inputs input {
+	/* margin-left: 15px; */
+	width: 32%;
+}
+
+.comment-inputs textarea {
+	margin-top: 10px;
+}
+
+.submit-box {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20px;
+}
+
+.submit-box button {
+	width: 70px;
+	height: 40px;
+	background-color: #898c7b;
+	font-size: 14px;
+	color: #FFFFFF;
+}
+
+/* 评论列表 */
+.comment-list-box {
+	margin-top: 50px;
+}
+
+.comments-session {
+	border-bottom: 3px solid #f5f8fa;
+	width: 100%;
+	padding-bottom: 40px;
+}
+
+.comment-item {
+	width: 850px;
+	display: flex;
+	flex-direction: row;
+	margin-top: 40px;
+	position: relative;
+}
+
+.comment-item .link-line {
+	width: 2px;
+	height: 68px;
+	position: absolute;
+	left: 24px;
+	top: 52px;
+	background-color: #898c7b;
+}
+
+.comment-infos {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	margin-left: 15px;
+}
+
+.comment-infos p.nickname {
+	font-weight: bold;
+	font-size: 16px;
+	color: #666666;
+}
+
+.comment-infos p.time {
+	color: #999999;
+	margin-top: 2px;
+}
+
+.comment-infos p.content {
+	margin-top: 16px;
 }
