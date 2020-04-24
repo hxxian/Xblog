@@ -84,7 +84,7 @@
 				<div class="comment-container">
 					<!-- 填写评论信息 -->
 					<div class="comment-send-box col-lg-12">
-						<img src="img/me.jpg" />
+						<img src="img/me.jpg"/>
 						<div class="comment-inputs">
 							<div class="flex-row content-between">
 								<input class="form-control" placeholder="*昵称" />
@@ -99,12 +99,15 @@
 					</div>
 
 					<!-- 评论 -->
-					<div class="comment-list-box col-lg-12">
+					<div class="comment-list-box col-lg-12"  id="comment">
 						<div class="comments-session">
-							<div class="comment-item">
+							<div class="comment-item" @click="itemMouseEnter(1)" @mouseleave="itemMouseLeave(1)">
 								<img src="img/me.jpg" />
 								<div class="link-line">
 
+								</div>
+								<div class="reply-btn">
+									<button class="btn">回复</button>
 								</div>
 								<div class="comment-infos">
 									<p class="nickname">舞零</p>
@@ -184,6 +187,7 @@
 
 		<!-- 项目js -->
 		<script src="js/common.js"></script>
-		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
+		<script src="components/nav-menu.js"></script>
+		<script src="js/comment.js"></script>
 	</body>
 </html>

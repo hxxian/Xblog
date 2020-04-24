@@ -153,6 +153,21 @@
 	background-color: #898c7b;
 }
 
+.comment-item .reply-btn {
+	position: absolute;
+	right: 0px;
+}
+
+.comment-item .reply-btn button {
+	width: 44px;
+	height: 24px;
+	font-size: 8px;
+	padding: 2px 4px;
+	box-sizing: border-box;
+	background-color: #898c7b;
+	color: #FFFFFF;
+}
+
 .comment-infos {
 	flex: 1;
 	display: flex;
