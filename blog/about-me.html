@@ -76,7 +76,7 @@
 				<div class="comment-container">
 					<!-- 填写评论信息 -->
 					<div class="comment-send-box col-lg-12">
-						<img src="img/me.jpg"/>
+						<img src="img/me.jpg" />
 						<div class="comment-inputs">
 							<div class="flex-row content-between">
 								<input class="form-control" placeholder="*昵称" />
@@ -91,15 +91,15 @@
 					</div>
 
 					<!-- 评论 -->
-					<div class="comment-list-box col-lg-12"  id="comment">
+					<div class="comment-list-box col-lg-12" id="comment">
 						<div class="comments-session">
 							<div class="comment-item" @mouseenter="itemMouseEnter(1)" @mouseleave="itemMouseLeave(1)">
 								<img src="img/me.jpg" />
 								<div class="link-line">
 
 								</div>
-								<div class="reply-btn" v-show="replyShow">
-									<button class="btn">回复</button>
+								<div class="reply-btn-box" @click="showReplyBox()" v-show="replyShow || readyReply">
+									<button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
 								</div>
 								<div class="comment-infos">
 									<p class="nickname">舞零</p>
@@ -133,7 +133,7 @@
 							<div class="comment-item">
 								<img src="img/me.jpg" />
 								<div class="link-line">
-							
+
 								</div>
 								<div class="comment-infos">
 									<p class="nickname">舞零</p>
@@ -144,7 +144,7 @@
 							<div class="comment-item">
 								<img src="img/me.jpg" />
 								<div class="link-line">
-							
+
 								</div>
 								<div class="comment-infos">
 									<p class="nickname">舞零</p>
@@ -164,6 +164,28 @@
 					</div>
 				</div>
 
+				<!-- 底部弹出评论 -->
+				<div class="bottom-send-box">
+					<div class="comment-container">
+						<!-- 填写评论信息 -->
+						<div class="comment-send-box col-lg-12">
+							<img src="img/me.jpg" />
+							<div class="comment-inputs">
+								<div class="flex-row content-between">
+									<input class="form-control" placeholder="*昵称" />
+									<input class="form-control" placeholder="*电子邮件" />
+									<input class="form-control" placeholder="个人站点" />
+								</div>
+								<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
+								
+								<div class="submit-box">
+									<button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
+									<button class="btn btn-default">回复</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 

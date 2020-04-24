@@ -137,6 +137,15 @@
 	opacity: 0;
 }
 
+.bottom-enter {
+	animation: bottom-in 0.5s ease;
+	animation-fill-mode: forwards;
+}
+
+.top-leave {
+	animation: top-out 0.5s ease;
+	animation-fill-mode: forwards;
+}
 
 h1 {
 	font-size: 40px;
