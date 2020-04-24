@@ -5,9 +5,9 @@ $(function() {
 		},
 		template: html
 	})
-	new Vue({
-		el: '#bloger'
-	})
+	// new Vue({
+	// 	el: '#bloger'
+	// })
 })
 
 var html =

@@ -1,7 +1,7 @@
 $(function() {
 	
-	let comment = new Vue({
-		el: '#comment',
+	var comment = new Vue({
+		el: '#bloger',
 		data: {
 			replyShow: false,
 		},
