@@ -75,6 +75,17 @@
 	color: #EEA236;
 }
 
+.menu-item-line {
+	height: 2px;
+	background-color: #FFFFFF;
+	margin-top: 4px;
+}
+
+.menu-item-line-show {
+	animation: scale-in 0.2s ease;
+	animation-fill-mode: forwards;
+}
+
 
 /* 分割线 */
 .partition-line {
