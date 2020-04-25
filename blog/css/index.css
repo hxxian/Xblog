@@ -144,6 +144,13 @@
 
 }
 
+.content-left {
+	width:115rem;
+}
+.content-right {
+	width: 48.125rem;
+}
+
 .left-item {
 	margin-left: 70px;
 	padding: 0px;
@@ -311,8 +318,8 @@ span.tag-content {
 }
 
 .week-items .day-item {
-	width: 16px;
-	height: 16px;
+	width: 1.5rem;
+	height: 1.5rem;
 	margin-top: 6px;
 	background-color: #ebedf0;
 }

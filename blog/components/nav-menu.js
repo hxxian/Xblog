@@ -2,28 +2,36 @@ $(function() {
 	Vue.component('nav-menu', {
 		data: function() {
 			return {
-				menus: [
-					{
-						menuName: "首页"
+				menus: [{
+						menuName: "首页",
+						linkPage: "index.html"
 					},
 					{
 						menuName: "文章"
 					},
 					{
-						menuName: "博客动态"
+						menuName: "博客动态",
+						linkPage: "archive.html"
 					},
 					{
-						menuName: "关于我"
+						menuName: "关于我",
+						linkPage: "about-me.html"
 					}
-				]
+				],
+				currentIdx: -1
 			}
 		},
 		methods: {
-			menuItemMouseIn: function() {
-				$(".menu-item-line").addClass("menu-item-line-show");
+			gotoPage: function(idx) {
+				if (this.menus[idx] && this.menus[idx].linkPage) {
+					window.location.href = "./" + this.menus[idx].linkPage
+				}
 			},
-			menuItemMouseLeave: function() {
-				$(".menu-item-line").removeClass("menu-item-line-show");
+			menuItemMouseIn: function(idx) {
+				this.currentIdx = idx;
+			},
+			menuItemMouseLeave: function(idx) {
+				this.currentIdx = -1;
 			}
 		},
 		template: html
@@ -34,9 +42,10 @@ var html =
 	'<div class="nav-top none">' +
 	'	<img src="img/blog-logo.png" class="logo-img" />' +
 	'	<div class="menu">' +
-	'		<div v-for="(m, idx) in menus" class="menu-item" @mouseenter="menuItemMouseIn()" @mouseleave="menuItemMouseLeave()">' +
+	'		<div v-for="(m, idx) in menus" class="menu-item" @click="gotoPage(idx)" @mouseenter="menuItemMouseIn(idx)" @mouseleave="menuItemMouseLeave(idx)">' +
 	'			<span>{{m.menuName}}</span>' +
-	'			<span class="menu-item-line"></span>' +
+	'			<span class="menu-item-line" v-bind:class="{\'menu-item-line-show\': idx == currentIdx}"></span>' +
 	'		</div>' +
 	'	</div>' +
 	'</div>';
+
