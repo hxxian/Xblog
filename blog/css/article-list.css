@@ -65,6 +65,20 @@
 	align-items: center;
 }
 
+.type-select-icon {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+}
+
+.type-select-icon:hover {
+	cursor: pointer;
+}
+
+.type-select-icon img {
+	width: 34px;
+}
+
 .type-box {
 	height: 60px;
 	border-bottom: 1px solid #009ABB;

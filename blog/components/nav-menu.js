@@ -7,7 +7,8 @@ $(function() {
 						linkPage: "index.html"
 					},
 					{
-						menuName: "文章"
+						menuName: "文章",
+						linkPage: "article-list.html"
 					},
 					{
 						menuName: "博客动态",
