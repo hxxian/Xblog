@@ -67,7 +67,7 @@
 
 .type-select-icon {
 	position: absolute;
-	left: 10px;
+	right: 10px;
 	top: 10px;
 }
 
@@ -76,7 +76,44 @@
 }
 
 .type-select-icon img {
-	width: 34px;
+	width: 2.5rem;
+}
+
+.type-list-box {
+	width: 240px;
+	min-height: 200px;
+	background-color: #FFFFFF;
+	opacity: 0.8;
+	border: 1px dashed;
+	display: inline-flex;
+	flex-direction: column;
+	position: absolute;
+	right: -250px;
+	transform: scale(0);
+}
+
+.type-list-box-show {
+	animation: scaleY-in 0.5s ease;
+	animation-fill-mode: forwards;
+}
+
+.type-item {
+	margin-top: 10px;
+	padding-left: 16px;
+}
+
+.type-item span {
+	color: #009ABB;
+	font-weight: 550;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	border-bottom: 1px dashed #666666;
+}
+
+.type-item span:hover {
+	cursor: pointer;
+	color: #204D74;
+	font-weight: 600;
 }
 
 .type-box {
@@ -107,7 +144,7 @@
 }
 
 .article-item span {
-	font-size: 16px;
+	font-size: 1.5rem;
 	letter-spacing: 2px;
 	border-bottom: 1px dashed #666666;
 }

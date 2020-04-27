@@ -35,8 +35,23 @@
 
 				<div class="float-article-container">
 					<!-- 文章类别选择icon -->
-					<div class="type-select-icon">
+					<div class="type-select-icon" @click="showArticleType()">
 						<img src="img/folder.png" title="查看文章列表"/>
+					</div>
+					<!-- 文章类别列表 -->
+					<div class="type-list-box" v-bind:class="{'type-list-box-show': showType}">
+						<div class="type-item">
+							<span>&#9672</span>
+							<span>设计模式系列</span>
+						</div>
+						<div class="type-item">
+							<span>&#9672</span>
+							<span>Mysql专题</span>
+						</div>
+						<div class="type-item">
+							<span>&#9672</span>
+							<span>重学数据结构</span>
+						</div>
 					</div>
 					<!-- 文章类别title -->
 					<div class="type-box col-lg-9">
@@ -50,7 +65,7 @@
 						</div>
 						<div class="article-item">
 							<span>&#10022&nbsp;</span>
-							<span>你确定你真的了解DRY原则？</span>
+							<span>重新解读java - ConcurrentModificationException异常</span>
 						</div>
 						<div class="article-item">
 							<span>&#10022&nbsp;</span>
