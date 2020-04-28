@@ -36,11 +36,13 @@
 	color: #FFFFFF;
 	font-weight: 600;
 	font-family: simhei;
+	text-shadow: 5px 2px 6px #000;
 }
 
 .blog-desc span {
 	font-size: 16px;
 	color: #FFFFFF;
+	text-shadow: 5px 2px 6px #000;
 }
 
 .title-line {

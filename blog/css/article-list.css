@@ -93,7 +93,12 @@
 }
 
 .type-list-box-show {
-	animation: scaleY-in 0.5s ease;
+	animation: scaleLT-in 0.5s ease;
+	animation-fill-mode: forwards;
+}
+
+.type-list-box-hide {
+	animation: scaleLT-out 0.5s ease;
 	animation-fill-mode: forwards;
 }
 
@@ -147,4 +152,10 @@
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	border-bottom: 1px dashed #666666;
+}
+
+/* 页码 */
+.page-nav {
+	position: absolute;
+	bottom: 0;
 }
