@@ -2,7 +2,7 @@
 	height: 640px;
 	width: 100%;
 	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/2000.jpg);
+	background-image: url(../img/bg2.jpg);
 	background-repeat: no-repeat;
 	background-position: bottom;
 	position: relative;
@@ -47,6 +47,7 @@
 	width: 100%;
 	min-height: 1200px;
 	padding-top: 70px;
+	position: relative;
 }
 
 .update-content-container {
@@ -55,6 +56,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 150px;
 }
 
 .update-month-item {
@@ -121,4 +123,88 @@
 
 .update-day-item span {
 	letter-spacing: 3px;
+}
+
+.blog-activity-container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: -500px;
+}
+
+/* 博客活动 */
+.blog-activity {
+	width: 1000px;
+	height: 320px;
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 10px;
+	padding-top: 20px;
+	box-sizing: border-box;
+}
+
+.blog-activity .item-title-box {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.blog-activity .item-title-box .title {
+	color: #FFFFFF;
+	font-size: 1.5rem;
+}
+
+.blog-activity .item-title-box .line {
+	width: 100px;
+	border: 1px dashed #FFFFFF;
+	margin-top: 8px;
+}
+
+.activity-items {
+	margin-top: 10px;
+	padding-top: 10px;
+	height: 200px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.week-items,
+.week-tags {
+	height: 200px;
+	margin-left: 6px;
+	display: inline-flex;
+	flex-direction: column;
+}
+
+.week-tag {
+	font-size: 8px;
+	color: #868686;
+	margin-top: 3px;
+	height: 20px;
+	margin-right: 4px;
+}
+
+.week-items .day-item {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-top: 6px;
+	background-color: #ebedf0;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+}
+
+.activity-color-tip {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-right: 40px;
+}
+
+.color-tip-item {
+	width: 15px;
+	height: 15px;
+	background-color: #ebedf0;
+	margin-left: 4px;
 }

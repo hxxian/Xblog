@@ -14,6 +14,9 @@ $(function() {
 				} else {
 					this.closeTypeTag = 2;
 				}
+			},
+			gotoArticle: function() {
+				window.location.href = "./article.html";
 			}
 		}
 	})
