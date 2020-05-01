@@ -40,6 +40,14 @@
 						<span class="day">30</span>
 					</div>
 
+					<div class="article-type-tag">
+						<span>&#9672&nbsp;设计模式</span>
+						<div class="triangle">
+
+						</div>
+					</div>
+
+
 					<!-- 文章类别选择icon -->
 					<div class="type-select-icon" @click="showArticleType()">
 						<img src="img/folder.png" title="查看文章列表" />
@@ -59,11 +67,10 @@
 							<span>重学数据结构</span>
 						</div>
 					</div>
-					<!-- 文章类别title -->
+					<!-- 文章title -->
 					<div class="type-box col-lg-9">
 						<span>#你确定你真的了解DRY原则？</span>
 					</div>
-					<!-- 文章列表 -->
 					<div class="article-tag-box col-lg-9">
 						<div class="tag-item">
 							<span class="glyphicon glyphicon-user"></span>
@@ -78,8 +85,158 @@
 							<span>浏览次数188</span>
 						</div>
 					</div>
+					<!-- 文章内容 -->
+					<div class="article-content">
+						<div class="content">
+							<p class="page-header" style="font-size: 2.0rem;margin-top: 20px; color: #000000;">Don't Repeat Yourself——可能你一直在写重复的代码</p>
+							<p style="margin-top: 10px;">
+								DRY原则，它的英文描述是：Don't Repeat Yourseft。中文可简单直译为：不要重复自己。
+							</p>
+							
+							<p style="margin-top: 10px;">
+								然而这条原则对于程序员来说，却再也熟悉不过了，尽管有的人不一定知道在代码设计原则中有这么一条叫做“DRY - Don't Repeat Yourseft”，但平时所写的代码多多少少有接触过这方面的概念，即：不要写重复的代码。
+							</p>
+							
+							<p style="margin-top: 10px;">
+								高级程序员和初级程序员在代码能力上，可能有着一个很明显的区别：高级程序员所写出来的代码可能会更加的易维护、易扩展，可读性更好（当然可能有特殊个例）。资深的程序员，他可能写过更多的代码，设计过更多的系统，同时也经历过更多的系统版本迭代。那么在这个过程中，由于需求的变更，或是性能的要求更高，亦或是程序员本身的能力、对代码的理解程度有所增长，那么可能就会去对原有代码进行重构，重构的目的则是使得代码变得更加易维护、易扩展。在重构过程中，当遇到有重复的代码时，可能就会想着把通用的逻辑抽象出来，做好封装。这个做法，也可以理解为在让代码不违背DRY原则。
+							</p>
+							<p>
+								但是，只要两段代码一样，就真的一定会违反DRY原则吗？换另一个角度说：两段代码长得不一样，是不是可以判定为不会违反DRY原则呢？
+							</p>
+							<p>
+								答案当然是否定的，结论是：
+							</p>
+							<p>
+								有些时候，代码虽然重复了，却不违反DRY原则；而有些时候，代码并没有重复，却违反了DRY原则。
+							</p>
+						</div>
+						<div class="end-line">
+							<span>THE END</span>
+						</div>
+						<div class="link-article">
+							<span><<&nbsp二维码扫码登录原理</span>
+							<span>面向对象与面向过程的争逐&nbsp>></span>
+						</div>
+					</div>
+					
+					<!-- 评论区 -->
+					<div class="comment-container">
+						<!-- 填写评论信息 -->
+						<div class="comment-send-box col-lg-12">
+							<img src="img/me.jpg" />
+							<div class="comment-inputs">
+								<div class="flex-row content-between">
+									<input class="form-control" placeholder="*昵称" />
+									<input class="form-control" placeholder="*电子邮件" />
+									<input class="form-control" placeholder="个人站点" />
+								</div>
+								<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
+								<div class="submit-box">
+									<button class="btn btn-default">提交</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- 评论 -->
+						<div class="comment-list-box col-lg-12" id="comment">
+							<div class="comments-session">
+								<div class="comment-item" @mouseenter="itemMouseEnter(1)" @mouseleave="itemMouseLeave(1)">
+									<img src="img/me.jpg" />
+									<div class="link-line">
+					
+									</div>
+									<div class="reply-btn-box" @click="showReplyBox()" v-show="replyShow || readyReply">
+										<button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
+									</div>
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
+									</div>
+								</div>
+								<div class="comment-item">
+									<img src="img/me.jpg" />
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">丢！技术栈多有个屁用，理解原理，理解源码才是最厉害的！</p>
+									</div>
+								</div>
+							</div>
+					
+							<!-- 会话组 -->
+							<div class="comments-session">
+								<div class="comment-item">
+									<img src="img/me.jpg" />
+									<div class="link-line">
+					
+									</div>
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
+									</div>
+								</div>
+								<div class="comment-item">
+									<img src="img/me.jpg" />
+									<div class="link-line">
+					
+									</div>
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
+									</div>
+								</div>
+								<div class="comment-item">
+									<img src="img/me.jpg" />
+									<div class="link-line">
+					
+									</div>
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
+									</div>
+								</div>
+								<div class="comment-item">
+									<img src="img/me.jpg" />
+									<div class="comment-infos">
+										<p class="nickname">舞零</p>
+										<p class="time">2020/04/22 22:10</p>
+										<p class="content">丢！技术栈多有个屁用，理解原理，理解源码才是最厉害的！</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 
+
+				
+
+				<!-- 底部弹出评论 -->
+				<div class="bottom-send-box">
+					<div class="comment-container">
+						<!-- 填写评论信息 -->
+						<div class="comment-send-box col-lg-12">
+							<img src="img/me.jpg" />
+							<div class="comment-inputs">
+								<div class="flex-row content-between">
+									<input class="form-control" placeholder="*昵称" />
+									<input class="form-control" placeholder="*电子邮件" />
+									<input class="form-control" placeholder="个人站点" />
+								</div>
+								<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
+
+								<div class="submit-box">
+									<button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
+									<button class="btn btn-default">回复</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 			</div>
 

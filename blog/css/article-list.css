@@ -1,3 +1,7 @@
+body {
+	background-color: #f6f6f6;
+}
+
 .screen-content {
 	height: 640px;
 	width: 100%;
@@ -57,12 +61,14 @@
 	height: 600px;
 	background: #FFFFFF;
 	opacity: 0.8;
-	border: 1px solid #CCCCCC;
-	position: absolute;
-	top: -150px;
+	border: 1px dashed rgba(155,155,155,0.8);
+	position: relative;
+	/* top: -150px; */
+	margin-top: -200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	border-radius: 6px;
 }
 
 .type-select-icon {
