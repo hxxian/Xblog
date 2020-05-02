@@ -45,7 +45,7 @@
 /* 主题内容 */
 .main-content {
 	width: 100%;
-	min-height: 1200px;
+	min-height: 600px;
 	padding-top: 70px;
 	position: relative;
 }
@@ -154,6 +154,7 @@
 .blog-activity .item-title-box .title {
 	color: #FFFFFF;
 	font-size: 1.5rem;
+	text-shadow: 1px 1px 1px #000000;
 }
 
 .blog-activity .item-title-box .line {

@@ -16,9 +16,8 @@ body {
 	flex-direction: column;
 	justify-content: flex-end;
 	align-items: center;
-	height: 100%;
-	margin-left: 150px;
-	padding-bottom: 80px;
+	margin-left: 8%;
+	margin-top: 50px;
 }
 
 .blog-name {
