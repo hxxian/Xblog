@@ -164,6 +164,19 @@
 	margin-bottom: 8px;
 }
 
+/* 回顶部按钮 */
+.back-top-box {
+	/* float: right; */
+	position: fixed;
+	right: 50px;
+	bottom: 60px;
+}
+
+.back-top-box:hover {
+	cursor: pointer;
+}
+
+/* 通用样式 */
 .flex-row {
 	display: flex;
 	flex-direction: row;
