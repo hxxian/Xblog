@@ -1,5 +1,9 @@
+body {
+	background-color: #f5f5f5;
+}
+
 .screen-content {
-	height: 800px;
+	height: 640px;
 	width: 100%;
 	border-bottom: 1px dashed #cccccc;
 	background-image: url(../img/monster_and_girl.jpg);
@@ -14,7 +18,7 @@
 	justify-content: flex-end;
 	align-items: center;
 	height: 100%;
-	margin-left: 150px;
+	margin-left: 8%;
 	padding-bottom: 80px;
 }
 
@@ -129,8 +133,7 @@
 /* 主题内容样式start */
 .main-content {
 	width: 100%;
-	min-height: 1200px;
-	/* background-color: #f8f8f8; */
+	min-height: 800px;
 	padding-top: 70px;
 	display: flex;
 	flex-direction: row;
@@ -156,44 +159,26 @@
 .left-item {
 	margin-left: 70px;
 	padding: 0px;
-}
-
-.left-item:hover {
-	box-shadow: 1px 3px 3px #666666;
+	margin-bottom: 30px;
 }
 
 .right-item {
 	margin-right: 30px;
 	padding-left: 18px;
 	padding-right: 18px;
-}
-
-.right-item:hover {
-	box-shadow: 1px 3px 3px #666666;
+	padding-bottom: 30px;
 }
 
 .left-item,
 .right-item {
-	border: 1px solid #CCCCCC;
+	border: 1px dashed rgba(155,155,155,0.3);
+	border-radius: 4px;
 	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 	position: relative;
-}
-
-.icon-container {
-	width: 80%;
-	height: 100px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-}
-
-.icon-container img {
-	width: 35px;
 }
 
 .left-item .latest-tag {
@@ -210,7 +195,6 @@
 	margin-top: 20px;
 }
 
-
 .item-title-box .line {
 	height: 1px;
 	width: 100%;
@@ -221,7 +205,6 @@
 
 .item-title-box .title {
 	background: #FFFFFF;
-	z-index: 1;
 	padding-left: 10px;
 	padding-right: 10px;
 	text-align: center;
@@ -276,7 +259,7 @@ span.tag-content {
 	font-family: 'Merriweather', serif;
 }
 
-.left-item .btn_more {
+.left-item .btn-more {
 	width: 175px;
 	height: 40px;
 	background-color: #617c58;
@@ -289,55 +272,10 @@ span.tag-content {
 	margin-top: 30px;
 }
 
-.blog-activity {
-	height: 320px;
-	margin-top: 50px;
-}
-
-.activity-items {
-	margin-top: 40px;
-	padding-top: 20px;
-	height: 200px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.week-items,
-.week-tags {
-	height: 200px;
-	margin-left: 6px;
-	display: inline-flex;
-	flex-direction: column;
-}
-
-.week-tag {
-	font-size: 8px;
-	color: #868686;
-	margin-top: 3px;
-	height: 20px;
-	margin-right: 4px;
-}
-
-.week-items .day-item {
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-top: 6px;
-	background-color: #ebedf0;
-}
-
-.activity-color-tip {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	margin-right: 40px;
-}
-
-.color-tip-item {
-	width: 15px;
-	height: 15px;
-	background-color: #ebedf0;
-	margin-left: 4px;
+.left-item .btn-more:hover {
+	animation: scaleCenter-in 0.2s ease;
+	animation-fill-mode: forwards;
+	cursor: pointer;
 }
 
 /* 关于我 */
@@ -345,13 +283,28 @@ span.tag-content {
 	font-size: 13px;
 	color: #474659;
 	line-height: 22px;
-	margin-top: 55px;
+	margin-top: 15px;
+	letter-spacing: 2px;
+}
+
+.me-qrcode {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+	color: #41a863;
+}
+
+.me-qrcode img {
+	width: 100px;
+	height: 100px;
 }
 
 /* 最新评论 */
 .latest-comment {
 	height: 310px;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 .latest-items {
@@ -379,7 +332,17 @@ span.tag-content {
 .latest-item span {
 	padding: 0;
 	font-size: 8px;
-	font-style: oblique
 }
 
-/* 主题内容样式end */
+/* 语录摘 */
+
+.motto {
+	margin-top: 30px;
+	height: 200px;
+}
+
+.motto .motto-content {
+	margin-top: 70px;
+	padding: 0 40px;
+	letter-spacing: 2px;
+}
