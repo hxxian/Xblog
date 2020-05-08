@@ -14,9 +14,26 @@ function navTopHideAndScrollShow() {
 			$(".nav-top").removeClass("none");
 			$(".nav-top").removeClass("nav-top-hide");
 			$(".nav-top").addClass("nav-top-show");
+			
+			scrollShow($(".back-top-box"));
+			scrollShow($("back-top-img"));
 		} else {
 			$(".nav-top").removeClass("nav-top-show");
 			$(".nav-top").addClass("nav-top-hide");
+			
+			scrollHide($(".back-top-box"));
+			scrollHide($(".back-top-img"));
 		}
 	});
+}
+
+function scrollShow(el) {
+	el.removeClass("none");
+	el.removeClass("fade-hide");
+	el.addClass("fade-show");
+}
+
+function scrollHide(el) {
+	el.removeClass("fade-show");
+	el.addClass("fade-hide");
 }

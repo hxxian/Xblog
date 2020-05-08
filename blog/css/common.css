@@ -10,6 +10,16 @@
 	height: 0;
 }
 
+.fade-show {
+	animation: fade-in 1s ease;
+	animation-fill-mode: forwards;
+}
+
+.fade-hide {
+	animation: fade-out 1s ease;
+	animation-fill-mode: forwards;
+}
+
 .nav-top-show {
 	height: 64px;
 	width: 100%;
@@ -170,6 +180,7 @@
 	position: fixed;
 	right: 50px;
 	bottom: 60px;
+	opacity: 0;
 }
 
 .back-top-box:hover {

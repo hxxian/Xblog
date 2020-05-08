@@ -88,15 +88,17 @@
 					<!-- 文章内容 -->
 					<div class="article-content">
 						<div class="content">
-							<p class="page-header" style="font-size: 2.0rem;margin-top: 20px; color: #000000;">Don't Repeat Yourself——可能你一直在写重复的代码</p>
+							<p class="page-header" style="font-size: 2.0rem;margin-top: 20px; color: #000000;">Don't Repeat
+								Yourself——可能你一直在写重复的代码</p>
 							<p style="margin-top: 10px;">
 								DRY原则，它的英文描述是：Don't Repeat Yourseft。中文可简单直译为：不要重复自己。
 							</p>
-							
+
 							<p style="margin-top: 10px;">
-								然而这条原则对于程序员来说，却再也熟悉不过了，尽管有的人不一定知道在代码设计原则中有这么一条叫做“DRY - Don't Repeat Yourseft”，但平时所写的代码多多少少有接触过这方面的概念，即：不要写重复的代码。
+								然而这条原则对于程序员来说，却再也熟悉不过了，尽管有的人不一定知道在代码设计原则中有这么一条叫做“DRY - Don't Repeat
+								Yourseft”，但平时所写的代码多多少少有接触过这方面的概念，即：不要写重复的代码。
 							</p>
-							
+
 							<p style="margin-top: 10px;">
 								高级程序员和初级程序员在代码能力上，可能有着一个很明显的区别：高级程序员所写出来的代码可能会更加的易维护、易扩展，可读性更好（当然可能有特殊个例）。资深的程序员，他可能写过更多的代码，设计过更多的系统，同时也经历过更多的系统版本迭代。那么在这个过程中，由于需求的变更，或是性能的要求更高，亦或是程序员本身的能力、对代码的理解程度有所增长，那么可能就会去对原有代码进行重构，重构的目的则是使得代码变得更加易维护、易扩展。在重构过程中，当遇到有重复的代码时，可能就会想着把通用的逻辑抽象出来，做好封装。这个做法，也可以理解为在让代码不违背DRY原则。
 							</p>
@@ -114,11 +116,12 @@
 							<span>THE END</span>
 						</div>
 						<div class="link-article">
-							<span><<&nbsp二维码扫码登录原理</span>
-							<span>面向对象与面向过程的争逐&nbsp>></span>
+							<span>
+								<<&nbsp二维码扫码登录原理</span> <span>面向对象与面向过程的争逐&nbsp>>
+							</span>
 						</div>
 					</div>
-					
+
 					<!-- 评论区 -->
 					<div class="comment-container">
 						<!-- 填写评论信息 -->
@@ -136,14 +139,14 @@
 								</div>
 							</div>
 						</div>
-					
+
 						<!-- 评论 -->
 						<div class="comment-list-box col-lg-12" id="comment">
 							<div class="comments-session">
 								<div class="comment-item" @mouseenter="itemMouseEnter(1)" @mouseleave="itemMouseLeave(1)">
 									<img src="img/me.jpg" />
 									<div class="link-line">
-					
+
 									</div>
 									<div class="reply-btn-box" @click="showReplyBox()" v-show="replyShow || readyReply">
 										<button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
@@ -163,13 +166,13 @@
 									</div>
 								</div>
 							</div>
-					
+
 							<!-- 会话组 -->
 							<div class="comments-session">
 								<div class="comment-item">
 									<img src="img/me.jpg" />
 									<div class="link-line">
-					
+
 									</div>
 									<div class="comment-infos">
 										<p class="nickname">舞零</p>
@@ -180,7 +183,7 @@
 								<div class="comment-item">
 									<img src="img/me.jpg" />
 									<div class="link-line">
-					
+
 									</div>
 									<div class="comment-infos">
 										<p class="nickname">舞零</p>
@@ -191,7 +194,7 @@
 								<div class="comment-item">
 									<img src="img/me.jpg" />
 									<div class="link-line">
-					
+
 									</div>
 									<div class="comment-infos">
 										<p class="nickname">舞零</p>
@@ -213,7 +216,7 @@
 				</div>
 
 
-				
+
 
 				<!-- 底部弹出评论 -->
 				<div class="bottom-send-box">
@@ -240,6 +243,9 @@
 
 			</div>
 
+			<!-- 回顶部按钮 -->
+			<back-top></back-top>
+
 			<!--页脚  -->
 			<nav-footer></nav-footer>
 		</div>
@@ -252,6 +258,7 @@
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/article.js"></script>
 	</body>
 </html>
