@@ -337,10 +337,12 @@ span.tag-content {
 
 .motto {
 	margin-top: 30px;
+	min-height: 170px;
 }
 
 .motto .motto-content {
 	margin-top: 60px;
-	padding: 0 40px;
+	padding: 0 40px 0px 40px;
 	letter-spacing: 2px;
 }
+
