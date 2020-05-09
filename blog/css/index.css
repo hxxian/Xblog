@@ -256,6 +256,12 @@ span.tag-content {
 	font-size: 15px;
 	color: #000000;
 	font-family: 'Merriweather', serif;
+	max-height: 90px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient:vertical ;
+	-webkit-line-clamp: 3;
 }
 
 .left-item .btn-more {
@@ -267,8 +273,8 @@ span.tag-content {
 	line-height: 40px;
 	font-size: 15px;
 	font-family: 'Merriweather', serif;
-	margin-bottom: 30px;
-	margin-top: 30px;
+	margin-bottom: 50px;
+	margin-top: 40px;
 }
 
 .left-item .btn-more:hover {
@@ -337,12 +343,15 @@ span.tag-content {
 
 .motto {
 	margin-top: 30px;
-	min-height: 170px;
+	min-height: 230px;
 }
 
 .motto .motto-content {
 	margin-top: 60px;
 	padding: 0 40px 0px 40px;
 	letter-spacing: 2px;
+	/* overflow: hidden; */
+	/* text-overflow: ellipsis; */
+	/* max-height: 100px; */
 }
 
