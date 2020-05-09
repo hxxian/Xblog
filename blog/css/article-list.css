@@ -72,7 +72,7 @@ body {
 
 .type-select-icon {
 	position: absolute;
-	right: 10px;
+	left: 10px;
 	top: 10px;
 }
 
@@ -93,7 +93,8 @@ body {
 	display: inline-flex;
 	flex-direction: column;
 	position: absolute;
-	right: -250px;
+	left: 0px;
+	top: -210px;
 	transform: scale(0);
 }
 

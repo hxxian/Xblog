@@ -57,34 +57,34 @@
 @keyframes scaleLT-in {
 	0% {
 		transform: scale(0);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 
 	90% {
 		transform: scale(1.1);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 
 	100% {
 		transform: scale(1);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 }
 
 @keyframes scaleLT-out {
 	0% {
 		transform: scale(1);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 
 	10% {
 		transform: scale(1.2);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 
 	100% {
 		transform: scale(0);
-		transform-origin: left top;
+		transform-origin: left bottom;
 	}
 }
 
