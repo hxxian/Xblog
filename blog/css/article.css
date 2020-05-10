@@ -4,10 +4,6 @@ body {
 .screen-content {
 	height: 640px;
 	width: 100%;
-	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/article-list.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
 	position: relative;
 }
 

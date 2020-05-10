@@ -41,7 +41,7 @@ $(function() {
 
 var html =
 	'<div class="nav-top none">' +
-	'	<img src="img/blog-logo.png" class="logo-img" />' +
+	'	<img src="img/logo2.jpg" class="logo-img" />' +
 	'	<div class="menu">' +
 	'		<div v-for="(m, idx) in menus" class="menu-item" @click="gotoPage(idx)" @mouseenter="menuItemMouseIn(idx)" @mouseleave="menuItemMouseLeave(idx)">' +
 	'			<span>{{m.menuName}}</span>' +

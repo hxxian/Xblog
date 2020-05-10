@@ -1,10 +1,10 @@
+body {
+	background-color: #f6f6f6;
+}
+
 .screen-content {
 	height: 640px;
 	width: 100%;
-	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/bg2.jpg);
-	background-repeat: no-repeat;
-	background-position: bottom;
 	position: relative;
 }
 
@@ -137,7 +137,7 @@
 .blog-activity {
 	width: 1100px;
 	height: 320px;
-	background-color: rgba(255,255,255,0.4);
+	background-color: rgba(0,0,0,0.2);
 	border-radius: 10px;
 	padding-top: 20px;
 	box-sizing: border-box;

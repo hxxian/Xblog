@@ -5,11 +5,6 @@ body {
 .screen-content {
 	height: 640px;
 	width: 100%;
-	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/monster_and_girl.jpg);
-	/* background-image: url(../img/article-list.jpg); */
-	background-repeat: no-repeat;
-	background-position: center;
 	position: relative;
 }
 
@@ -71,7 +66,7 @@ body {
 	width: 108px;
 	height: 108px;
 	border-radius: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.7);
 }
 
 .avatar-box img {
@@ -102,7 +97,7 @@ body {
 
 .search-container input {
 	border-radius: 30px;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.4);
 	color: #FFFFFF;
 	border: #000000;
 }
@@ -120,7 +115,7 @@ body {
 }
 
 .contact-item {
-	background-color: rgba(255, 255, 255, 0.4);
+	background-color: rgba(0, 0, 0, 0.2);
 	border-radius: 100%;
 	padding: 4px;
 	margin-right: 14px;
