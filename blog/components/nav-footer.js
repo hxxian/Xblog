@@ -3,6 +3,12 @@ $(function() {
 		data: function() {
 			return {}
 		},
+		methods: {
+			gotoICPSystem: function() {
+				// window.location.href = "http://www.beian.miit.gov.cn/publish/query/indexFirst.action";
+				window.location.href = "http://www.beian.miit.gov.cn";
+			}
+		},
 		template: footer
 	})
 })
@@ -33,6 +39,6 @@ var footer =
 	'		</div> ' +
 	'	</div> ' +
 	'	<div class="record-info flex-row content-center"> ' +
-	'		<p>©2020-xxxx xxxx备 xxxxxxxxx号 公网安备 xxxxxxxxxx号</p> ' +
+	'		©2020-浮晓悠羡&nbsp;&nbsp;&nbsp;<span class="icp" @click="gotoICPSystem()">粤ICP备&nbsp;20036399号</span> <img src="img/beian_icon.png"/>公网安备 xxxxxxxxxx号 ' +
 	'	</div> ' +
 	'</div> ';

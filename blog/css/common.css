@@ -130,6 +130,17 @@
 	padding-top: 20px;
 }
 
+.record-info img {
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+}
+
+.record-info .icp:hover {
+	color: #de7b54;
+	cursor: pointer;
+}
+
 .nav-contact-box {
 	display: flex;
 	flex-direction: row;
