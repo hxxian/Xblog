@@ -1,8 +1,10 @@
 $(function() {
 	
-	var article = new Vue({
+	var vue = new Vue({
 		el: '#bloger',
 		data: {
+			articleTitle: "",
+			articleContent: "",
 			showType: false,
 			closeTypeTag: 0,
 			replyShow: false,
@@ -10,6 +12,13 @@ $(function() {
 			replyBtnText: "回复"
 		},
 		methods: {
+			loadArticle: function() {
+				let that = this;
+				loadArticleById(4).then((data) => {
+					that.articleTitle = data.title;
+					that.articleContent = data.content;
+				})
+			},
 			showArticleType: function() {
 				this.showType = !this.showType;
 				if (!this.showType) {
@@ -49,4 +58,5 @@ $(function() {
 		}
 	})
 	
+	vue.loadArticle();
 })
