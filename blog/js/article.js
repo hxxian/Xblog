@@ -14,7 +14,7 @@ $(function() {
 		methods: {
 			loadArticle: function() {
 				let that = this;
-				loadArticleById(4).then((data) => {
+				loadArticleById(6).then((data) => {
 					that.articleTitle = data.title;
 					that.articleContent = data.content;
 				})
