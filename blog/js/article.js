@@ -1,5 +1,7 @@
 $(function() {
 	
+	var articleId = getQueryVariable('articleId');
+	
 	var vue = new Vue({
 		el: '#bloger',
 		data: {
@@ -14,7 +16,10 @@ $(function() {
 		methods: {
 			loadArticle: function() {
 				let that = this;
-				loadArticleById(6).then((data) => {
+				if (!articleId) {
+					articleId = 1;
+				}
+				loadArticleById(articleId).then((data) => {
 					that.articleTitle = data.title;
 					that.articleContent = data.content;
 				})

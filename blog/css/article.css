@@ -272,6 +272,7 @@ body {
 .comment-send-box {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 30px;
 }
 
 .comment-inputs {

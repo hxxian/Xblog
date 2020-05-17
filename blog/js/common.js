@@ -37,3 +37,20 @@ function scrollHide(el) {
 	el.removeClass("fade-show");
 	el.addClass("fade-hide");
 }
+
+/**
+ * 获取url路径中指定参数的值
+ * 
+ * @param {Object} variable
+ */
+function getQueryVariable(variable) {
+	var query = window.location.search.substring(1);
+	var vars = query.split("&");
+	for (var i = 0; i < vars.length; i++) {
+		var pair = vars[i].split("=");
+		if (pair[0] == variable) {
+			return pair[1];
+		}
+	}
+	return (false);
+}

@@ -40,36 +40,20 @@
 					</div>
 					<!-- 文章类别列表 -->
 					<div class="type-list-box" v-bind:class="{'type-list-box-show': showType, 'type-list-box-hide': closeTypeTag == 1}">
-						<div class="type-item">
+						<div v-for="t in typeList" class="type-item">
 							<span>&#9672</span>
-							<span>设计模式系列</span>
-						</div>
-						<div class="type-item">
-							<span>&#9672</span>
-							<span>Mysql专题</span>
-						</div>
-						<div class="type-item">
-							<span>&#9672</span>
-							<span>重学数据结构</span>
+							<span>{{t.typeName}}</span>
 						</div>
 					</div>
 					<!-- 文章类别title -->
 					<div class="type-box col-lg-9">
-						<span>#设计模式系列</span>
+						<span>#{{currTypeName}}</span>
 					</div>
 					<!-- 文章列表 -->
 					<div class="article-list-box col-lg-9">
-						<div class="article-item" @click="gotoArticle()">
+						<div v-for="t in titleList" class="article-item" @click="gotoArticle(t.articleId)">
 							<span>&#10022&nbsp;</span>
-							<span>你确定你真的了解DRY原则？</span>
-						</div>
-						<div class="article-item">
-							<span>&#10022&nbsp;</span>
-							<span>重新解读java - ConcurrentModificationException异常</span>
-						</div>
-						<div class="article-item">
-							<span>&#10022&nbsp;</span>
-							<span>你确定你真的了解DRY原则？</span>
+							<span>{{t.articleTitle}}</span>
 						</div>
 					</div>
 					<div class="page-nav col-lg-12 flex-row content-end">
@@ -114,6 +98,9 @@
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script src="js/router.js"></script>
 		<script src="js/article-list.js"></script>
 	</body>
 </html>
