@@ -5,6 +5,7 @@ $(function() {
 	var vue = new Vue({
 		el: '#bloger',
 		data: {
+			typeName: "",
 			articleTitle: "",
 			articleContent: "",
 			showType: false,
@@ -15,13 +16,13 @@ $(function() {
 		},
 		methods: {
 			loadArticle: function() {
-				let that = this;
 				if (!articleId) {
 					articleId = 1;
 				}
 				loadArticleById(articleId).then((data) => {
-					that.articleTitle = data.title;
-					that.articleContent = data.content;
+					this.typeName = data.typeName;
+					this.articleTitle = data.title;
+					this.articleContent = data.content;
 				})
 			},
 			showArticleType: function() {

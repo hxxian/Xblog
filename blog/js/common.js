@@ -39,6 +39,23 @@ function scrollHide(el) {
 }
 
 /**
+ * 毫秒时间戳转
+ * 
+ * @param {Object} timestemp
+ */
+function formatDate(timestemp) { 
+    let y = now.getFullYear();
+    let M = now.getMonth() + 1; // 注意js里的月要加1 
+    let d = now.getDate();
+    let h = now.getHours(); 
+    let m = now.getMinutes(); 
+    let s = now.getSeconds();
+    
+	let arr = new Array(y, M, d, h, m, s);
+    return arr; 
+} 
+
+/**
  * 获取url路径中指定参数的值
  * 
  * @param {Object} variable

@@ -40,7 +40,7 @@
 					</div>
 					<!-- 文章类别列表 -->
 					<div class="type-list-box" v-bind:class="{'type-list-box-show': showType, 'type-list-box-hide': closeTypeTag == 1}">
-						<div v-for="t in typeList" class="type-item">
+						<div v-for="t in typeList" @click="getTitlesForType(t.typeId)" class="type-item">
 							<span>&#9672</span>
 							<span>{{t.typeName}}</span>
 						</div>

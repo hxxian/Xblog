@@ -23,6 +23,12 @@ $(function() {
 					this.titleList = data;
 				});
 			},
+			getTitlesForType: function(typeId) {
+				loadArticleTitlesByTypeId(typeId, 1).then((data) => {
+					this.titleList = data;
+					// this.$forceUpdate();
+				})
+			},
 			showArticleType: function() {
 				this.showType = !this.showType;
 				if (!this.showType) {
