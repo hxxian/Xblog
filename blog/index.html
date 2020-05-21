@@ -74,50 +74,24 @@
 			<!-- main content -->
 			<div class="main-content">
 				<div class="content-left">
-					<!-- 最新文章 -->
-					<div class="left-item col-lg-11">
+					
+					<div v-for="a in articles" class="left-item col-lg-11">
 
 						<div class="item-title-box col-lg-6">
 							<p class="line"></p>
-							<p class="title">最新文章</p>
+							<p class="title">{{a.tag == 1 ? '最新文章' : '最热文章'}}</p>
 						</div>
-
-						<p class="article-title">断舍离，断的是物品，离的是执念</p>
+						<p class="article-title">{{a.title}}</p>
 						<div class="artile-tag">
 							<span class="glyphicon glyphicon-user"></span>
 							<span class="tag-content">舞零</span>
 							<span class="glyphicon glyphicon-calendar"></span>
-							<span class="tag-content">9月 21, 2017</span>
+							<span class="tag-content">{{a.formatTime}}</span>
 							<span class="glyphicon glyphicon-eye-open"></span>
-							<span class="tag-content">8882</span>
+							<span class="tag-content">{{a.readCount}}</span>
 						</div>
-						<p class="article-content">
-							物品是“看得见的形态”与“看不见的情感”的结合体，除此之外，物品也是我们“思维结果的证据”。我们手中的东西是基于我们的某种价值观，基于我们的思考、选择和决断之后出现的。即便是想也没想就入手的东西，它本身也带有自己潜意识的投影。每一件物品的存在，都是真我的内心映射，断舍离，断掉是物品，脱离的确是我们的执念，净化了我们的心灵。</p>
-						<div class="btn-more">
-							查看全文
-						</div>
-					</div>
-
-					<!-- 最热文章 -->
-					<div class="left-item col-lg-11">
-
-						<div class="item-title-box col-lg-6">
-							<p class="line"></p>
-							<p class="title">最热文章</p>
-						</div>
-
-						<p class="article-title">断舍离，断的是物品，离的是执念</p>
-						<div class="artile-tag">
-							<span class="glyphicon glyphicon-user"></span>
-							<span class="tag-content">舞零</span>
-							<span class="glyphicon glyphicon-calendar"></span>
-							<span class="tag-content">9月 21, 2017</span>
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span class="tag-content">8882</span>
-						</div>
-						<p class="article-content">
-							物品是“看得见的形态”与“看不见的情感”的结合体，除此之外，物品也是我们“思维结果的证据”。我们手中的东西是基于我们的某种价值观，基于我们的思考、选择和决断之后出现的。即便是想也没想就入手的东西，它本身也带有自己潜意识的投影。每一件物品的存在，都是真我的内心映射，断舍离，断掉是物品，脱离的确是我们的执念，净化了我们的心灵。</p>
-						<div class="btn-more">
+						<p class="article-content">{{a.digest}}</p>
+						<div class="btn-more" @click="gotoArticleDetail(a.articleId)">
 							查看全文
 						</div>
 					</div>
@@ -142,38 +116,15 @@
 					<div class="right-item latest-comment col-lg-10">
 						<div class="item-title-box col-lg-8">
 							<p class="line"></p>
-							<p class="title">最新评论</p>
+							<p class="title">热度文章</p>
 						</div>
 						<div class="latest-items">
 
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
+							<div v-for="t in titles" class="latest-item col-lg-12" @click="gotoArticleDetail(t.articleId)">
+								<p>#{{t.articleTitle}}</p>
+								<span>{{t.formatTime}}</span>
 							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
-							<div class="latest-item col-lg-12">
-								<p>#博主请问什么时候更新文章？</p>
-								<span>2020-07-07</span>
-							</div>
+							
 						</div>
 
 					</div>
@@ -185,7 +136,7 @@
 							<p class="title">语录摘</p>
 						</div>
 						<div class="motto-content">
-							<span>每一件物品的存在，都是真我的内心映射，断舍离，断掉是物品，脱离的确是我们的执念，净化了我们的心灵。</span>
+							<span>{{diaryContent}}</span>
 						</div>
 					</div>
 				</div>
@@ -208,6 +159,9 @@
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="js/common.js"></script>
+		<script src="js/router.js"></script>
 		<script src="js/index.js"></script>
 	</body>
 

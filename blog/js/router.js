@@ -1,6 +1,21 @@
 var DEBUG = true;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "";
 
+function loadHomeData() {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: basePath + 'home/',
+			type: 'get',
+			dataType: 'json',
+			statusCode: {
+				200: function(data) {
+					resolve(data)
+				}
+			}
+		})
+	})
+}
+
 /**
  * 查看文章详情
  * 

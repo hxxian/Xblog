@@ -44,12 +44,13 @@ function scrollHide(el) {
  * @param {Object} timestemp
  */
 function formatDate(timestemp) { 
-    let y = now.getFullYear();
-    let M = now.getMonth() + 1; // 注意js里的月要加1 
-    let d = now.getDate();
-    let h = now.getHours(); 
-    let m = now.getMinutes(); 
-    let s = now.getSeconds();
+	let date = new Date(timestemp);
+    let y = date.getFullYear();
+    let M = date.getMonth() + 1; // 注意js里的月要加1 
+    let d = date.getDate();
+    let h = date.getHours(); 
+    let m = date.getMinutes(); 
+    let s = date.getSeconds();
     
 	let arr = new Array(y, M, d, h, m, s);
     return arr; 

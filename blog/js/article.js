@@ -20,6 +20,8 @@ $(function() {
 					articleId = 1;
 				}
 				loadArticleById(articleId).then((data) => {
+					console.log(data)
+					
 					this.typeName = data.typeName;
 					this.articleTitle = data.title;
 					this.articleContent = data.content;
