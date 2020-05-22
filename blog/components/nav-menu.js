@@ -11,7 +11,7 @@ $(function() {
 						linkPage: "article-list.html"
 					},
 					{
-						menuName: "博客动态",
+						menuName: "归档",
 						linkPage: "archive.html"
 					},
 					{

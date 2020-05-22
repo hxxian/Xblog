@@ -1,6 +1,30 @@
 var DEBUG = true;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "";
 
+/**
+ * 加载归档页数据
+ */
+function loadArchiveData() {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: basePath + 'article/archives',
+			type: 'get',
+			dataType: 'json',
+			statusCode: {
+				200: function(data) {
+					resolve(data)
+				},
+				404: function() {
+					reject()
+				}
+			}
+		})
+	})
+}
+
+/**
+ * 加载首页数据
+ */
 function loadHomeData() {
 	return new Promise(function(resolve, reject) {
 		$.ajax({

@@ -67,10 +67,10 @@
 				<!-- 归档列表 -->
 				<div class="update-content-container">
 
-					<div class="update-month-item col-lg-5">
+					<div v-for="g in archiveGroups" class="update-month-item col-lg-5">
 						<!-- 月份标题 -->
 						<div class="archive-month-tag">
-							<span>2020年7月</span>
+							<span>{{g.dateGroup}}</span>
 						</div>
 
 						<span class="tag-header-icon"></span>
@@ -78,25 +78,9 @@
 						<!-- 每月更新列表 -->
 						<div class="update-day-list">
 
-							<div class="update-day-item">
+							<div v-for="t in g.articleTitles" @click="gotoArticleDetail(t.articleId)" class="update-day-item">
 								<div class="item-left">
-									<span>07-02 何如优雅记录日志更新</span>
-								</div>
-								<div class="item-right">
-								</div>
-							</div>
-
-							<div class="update-day-item">
-								<div class="item-left">
-									<span>07-10 雅记录日志更新</span>
-								</div>
-								<div class="item-right">
-								</div>
-							</div>
-
-							<div class="update-day-item">
-								<div class="item-left">
-									<span>07-22 何如优雅记录日志更新哈时间快点发货</span>
+									<span>{{t.publishTime}} {{t.articleTitle}}</span>
 								</div>
 								<div class="item-right">
 								</div>
@@ -124,10 +108,12 @@
 
 		<!-- 项目js -->
 		<script src="layer/layer.js"></script>
+		<script src="js/router.js"></script>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+		
 		<script src="js/archive.js"></script>
 	</body>
 </html>
