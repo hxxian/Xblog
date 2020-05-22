@@ -36,8 +36,8 @@
 				<div class="float-article-container">
 					<!-- 大日期 -->
 					<div class="article-date-box">
-						<span class="month">04</span>
-						<span class="day">30</span>
+						<span class="month">{{aMonth}}</span>
+						<span class="day">{{aDay}}</span>
 					</div>
 
 					<div class="article-type-tag">
@@ -58,11 +58,11 @@
 						</div>
 						<div class="tag-item">
 							<span class="glyphicon glyphicon-calendar"></span>
-							<span>发表于2020-04-30</span>
+							<span>发表于{{publishDate}}</span>
 						</div>
 						<div class="tag-item">
 							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>浏览次数188</span>
+							<span>浏览次数{{readCount}}</span>
 						</div>
 					</div>
 					<!-- 文章内容 -->
@@ -186,6 +186,7 @@
 		<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 		<!-- 项目js -->
+		<script src="layer/layer.js"></script>
 		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>

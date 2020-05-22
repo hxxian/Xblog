@@ -10,6 +10,9 @@ function loadHomeData() {
 			statusCode: {
 				200: function(data) {
 					resolve(data)
+				},
+				404: function() {
+					reject()
 				}
 			}
 		})

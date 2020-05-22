@@ -5,9 +5,13 @@ $(function() {
 	var vue = new Vue({
 		el: '#bloger',
 		data: {
+			aMonth: 0,
+			aDay: 0,
+			publishDate: "",
 			typeName: "",
 			articleTitle: "",
 			articleContent: "",
+			readCount: 0,
 			showType: false,
 			closeTypeTag: 0,
 			replyShow: false,
@@ -16,16 +20,23 @@ $(function() {
 		},
 		methods: {
 			loadArticle: function() {
+				layer.load(0, {shade: false});
 				if (!articleId) {
 					articleId = 1;
 				}
 				loadArticleById(articleId).then((data) => {
-					console.log(data)
-					
 					this.typeName = data.typeName;
 					this.articleTitle = data.title;
 					this.articleContent = data.content;
-				})
+					this.readCount = data.readCount;
+					let times = formatDate(data.publishTimestamp);
+					if (times) {
+						this.aMonth = appendZero(times[1]);
+						this.aDay = times[2];
+						this.publishDate = times[0] + "-" + times[1] + "-" + times[2];
+					}
+					layer.closeAll('loading');
+				});
 			},
 			showArticleType: function() {
 				this.showType = !this.showType;
