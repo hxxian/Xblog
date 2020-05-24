@@ -113,6 +113,18 @@ body {
 	margin-bottom: 20px;
 }
 
+.introduce-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.introduce-content span {
+	display: inline-block;
+}
+
 .me-skill {
 	width: 70%;
 	display: flex;
