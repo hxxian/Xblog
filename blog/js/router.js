@@ -1,5 +1,5 @@
-var DEBUG = true;
-var basePath = DEBUG ? "http://127.0.0.1:8181/" : "";
+var DEBUG = false;
+var basePath = DEBUG ? "http://127.0.0.1:8181/" : "http://47.107.141.186:8080/xbloger/";
 
 /**
  * 加载归档页数据
