@@ -9,7 +9,7 @@ $(function() {
 		methods: {
 			gotoICPSystem: function() {
 				// window.location.href = "http://www.beian.miit.gov.cn/publish/query/indexFirst.action";
-				window.location.href = "http://www.beian.miit.gov.cn";
+				window.open("http://www.beian.miit.gov.cn");
 			},
 			gotoContact: function(type) {
 				// 1 - github, 2 - csdn, 3 - wehcat, 4 - QQ, 5 - email
@@ -65,10 +65,10 @@ var footer =
 	'		</div> ' +
 	'	</div> ' +
 	'	<div class="record-info flex-row content-center"> ' +
-	'		©2020-浮晓悠羡&nbsp;&nbsp;&nbsp;<span class="icp" @click="gotoICPSystem()">粤ICP备&nbsp;20036399号</span> <img src="img/beian_icon.png"/>公网安备 xxxxxxxxxx号 ' +
+	'		©2020-浮晓悠羡&nbsp;&nbsp;&nbsp;<span class="icp" @click="gotoICPSystem()">粤ICP备&nbsp;20036399号</span>' +
 	'	</div> ' +
 	'</div> ';
-
+// <img src="img/beian_icon.png"/>公网安备 xxxxxxxxxx号 
 var wxqrcode = {
 	"title": "微信二维码", 
 	"id": 1, 
@@ -77,8 +77,8 @@ var wxqrcode = {
 		{
 			"alt": "加微信申请要备注一下哦",
 			"pid": 1, //图片id
-			"src": "http://static.resource.com/bloger/image/wechat_qrcode.jpg", //原图地址
-			"thumb": "http://static.resource.com/bloger/image/wechat_qrcode_thumb.jpg" //缩略图地址
+			"src": "https://www.hxxian.cn/static/bloger/image/wechat_qrcode.jpg", //原图地址
+			"thumb": "https://www.hxxian.cn/static/bloger/image/wechat_qrcode_thumb.jpg" //缩略图地址
 		}
 	]
 }
@@ -91,8 +91,8 @@ var qqQrcode = {
 		{
 			"alt": "加QQ申请要备注一下哦",
 			"pid": 1, //图片id
-			"src": "http://static.resource.com/bloger/image/qq_qrcode.jpg", //原图地址
-			"thumb": "http://static.resource.com/bloger/image/qq_qrcode_thumb.jpg" //缩略图地址
+			"src": "https://www.hxxian.cn/static/bloger/image/qq_qrcode.jpg", //原图地址
+			"thumb": "https://www.hxxian.cn/static/bloger/image/qq_qrcode_thumb.jpg" //缩略图地址
 		}
 	]
 }

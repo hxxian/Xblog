@@ -157,6 +157,8 @@ body {
 	line-height: 26px;
 	font-size: 1.3rem;
 	margin-top: 50px;
+	display: flex;
+	justify-content: center;
 }
 
 .skill-one, .skill-two, .skill-three, .skill-four {
