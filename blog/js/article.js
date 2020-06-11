@@ -36,6 +36,8 @@ $(function() {
 						this.publishDate = times[0] + "-" + times[1] + "-" + times[2];
 					}
 					layer.closeAll('loading');
+					
+					document.title = data.title;
 				});
 			},
 			showArticleType: function() {
