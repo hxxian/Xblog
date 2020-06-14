@@ -18,7 +18,7 @@ $(function() {
 								let dateArr = formatDate(this.archiveGroups[i].articleTitles[j].publishTime);
 								
 								this.archiveGroups[i].articleTitles[j].publishTime 
-								= appendZero(dateArr[1]) + "-" + appendZero(dateArr[3]);
+								= appendZero(dateArr[1]) + "-" + appendZero(dateArr[2]);
 							}
 						}
 					}

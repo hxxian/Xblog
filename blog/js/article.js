@@ -33,7 +33,7 @@ $(function() {
 					if (times) {
 						this.aMonth = appendZero(times[1]);
 						this.aDay = times[2];
-						this.publishDate = times[0] + "-" + times[1] + "-" + times[2];
+						this.publishDate = times[0] + "-" + appendZero(times[1]) + "-" + appendZero(times[2]);
 					}
 					layer.closeAll('loading');
 					
