@@ -36,7 +36,7 @@
 
 			<div class="main-content">
 
-				<div class="float-article-container">
+				<div class="float-article-container col-lg-7 col-sm-10">
 					<!-- 文章类别选择icon -->
 					<div class="type-select-icon" @click="showArticleType()">
 						<img src="img/folder.png" title="查看文章列表" />
@@ -49,17 +49,17 @@
 						</div>
 					</div>
 					<!-- 文章类别title -->
-					<div class="type-box col-lg-9">
+					<div class="type-box col-lg-9 col-sm-9">
 						<span>#{{currTypeName}}</span>
 					</div>
 					<!-- 文章列表 -->
-					<div class="article-list-box col-lg-9">
+					<div class="article-list-box col-lg-9 col-sm-9">
 						<div v-for="t in titleList" class="article-item" @click="gotoArticle(t.articleId)">
 							<span>&#10022&nbsp;</span>
 							<span>{{t.articleTitle}}</span>
 						</div>
 					</div>
-					<div class="page-nav col-lg-12 flex-row content-end">
+					<div class="page-nav col-lg-12 col-sm-12 flex-row content-end">
 						<nav aria-label="Page navigation">
 							<ul class="pagination">
 								<li>
