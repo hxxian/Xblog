@@ -51,7 +51,7 @@ body {
 }
 
 .update-content-container {
-	position: relative;
+	/*position: relative;*/
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -63,6 +63,7 @@ body {
 	border-left: 1px solid #00313C;
 	position: relative;
 	margin-bottom: 100px;
+	width: 50%;
 }
 
 .archive-month-tag {
@@ -135,7 +136,7 @@ body {
 
 /* 博客活动 */
 .blog-activity {
-	width: 1100px;
+	/*width: 80%;*/
 	height: 320px;
 	background-color: rgba(0,0,0,0.2);
 	border-radius: 10px;
@@ -174,7 +175,7 @@ body {
 
 .week-items,
 .week-tags {
-	height: 150;
+	height: 150px;
 	margin-left: 6px;
 	display: inline-flex;
 	flex-direction: column;
@@ -208,4 +209,22 @@ body {
 	height: 15px;
 	background-color: #ebedf0;
 	margin-left: 4px;
+}
+
+/******* 移动设备下（包括ipad）个别样式的定义 *******/
+@media screen and (max-width: 1080px) {
+	.week-items .day-item {
+		width: 1.0rem;
+		height: 1.0rem;
+		margin-top: 6px;
+		background-color: #ffffff;
+		box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+	}
+
+	.color-tip-item {
+		width: 12px;
+		height: 12px;
+		background-color: #ebedf0;
+		margin-left: 4px;
+	}
 }
