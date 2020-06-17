@@ -1,6 +1,14 @@
 body {
 	background-color: #f6f6f6;
 }
+
+.article-content img {
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .screen-content {
 	height: 640px;
 	width: 100%;
