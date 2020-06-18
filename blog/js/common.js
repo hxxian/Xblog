@@ -3,7 +3,6 @@
 
 $(function() {
 
-
 	let keywords='hxxian.cn,hxxian,xbloger,xblog,个人博客，浮晓悠羡，浮晓，悠羡，Java博客，Android博客';
 	let description='个人博客空间网站，用于记录、展示个人文章。为分享，为省身，为学习';
 
@@ -11,6 +10,28 @@ $(function() {
 	addMeta('description', description);
 
 	navTopHideAndScrollShow();
+
+	$("#gooey-v").gooeymenu({
+		bgColor: "#68d099",
+		contentColor: "white",
+		style: "vertical",
+		horizontal: {
+			menuItemPosition: "glue"
+		},
+		vertical: {
+			menuItemPosition: "spaced",
+			direction: "down"
+		},
+		circle: {
+			radius: 90
+		},
+		margin: "small",
+		size: 45,
+		bounce: true,
+		bounceLength: "small",
+		transitionStep: 100,
+		hover: "#de7b54"
+	});
 
 })
 

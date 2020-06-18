@@ -265,6 +265,30 @@
 	animation-fill-mode: forwards;
 }
 
+.radius-menu {
+	position: fixed;
+	right: -220px;
+	top: 50px;
+	z-index: 5;
+}
+
+.radius-menu span {
+	font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1080px) {
+	.radius-menu span {
+		font-size: 2.0rem;
+	}
+}
+
+.radius-menu a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 h1 {
 	font-size: 40px;
 }

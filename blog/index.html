@@ -6,13 +6,14 @@
     <link rel="icon" href="img/blog-icon.jpg" type="image/x-icon"/>
     <link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon"/>
     <!-- CDN css文件 -->
-    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <!--    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>-->
+    <link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/H-ui.reset.css"/>
 
     <!-- 项目css -->
-    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=20200619000759"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="css/anim.css"/>
     <title>首页|浮晓悠羡</title>
@@ -21,6 +22,8 @@
 <div class="container-fluid" id="bloger">
     <!-- 顶部导航 -->
     <nav-menu></nav-menu>
+    <!-- 圆形悬浮导航 -->
+    <float-nav-menu></float-nav-menu>
 
     <!-- blog标题 -->
     <div class="screen-content">
@@ -45,33 +48,33 @@
         </div>
 
         <!-- 搜索框 -->
-        <div class="search-container">
+        <!--        <div class="search-container">-->
 
-            <!-- 搜索框 -->
-            <!--<div class="search-content">
-                <input type="tel" name="search" id="search" placeholder="search……" class="form-control" />
-                &lt;!&ndash; <span class="glyphicon glyphicon-search"></span> &ndash;&gt;
-            </div>-->
+        <!-- 搜索框 -->
+        <!--<div class="search-content">
+            <input type="tel" name="search" id="search" placeholder="search……" class="form-control" />
+            &lt;!&ndash; <span class="glyphicon glyphicon-search"></span> &ndash;&gt;
+        </div>-->
 
-            <!-- 社交平台icon -->
-            <!--<div class="contact-box">
-                <div class="contact-item">
-                    <img src="img/icon_github.png">
-                </div>
-                <div class="contact-item">
-                    <img src="img/icon_csdn.png">
-                </div>
-                <div class="contact-item">
-                    <img src="img/icon_qq.png">
-                </div>
-                <div class="contact-item">
-                    <img src="img/icon_wechat.png">
-                </div>
-                <div class="contact-item">
-                    <img src="img/icon_mail.png">
-                </div>
-            </div>-->
-        </div>
+        <!-- 社交平台icon -->
+        <!--<div class="contact-box">
+            <div class="contact-item">
+                <img src="img/icon_github.png">
+            </div>
+            <div class="contact-item">
+                <img src="img/icon_csdn.png">
+            </div>
+            <div class="contact-item">
+                <img src="img/icon_qq.png">
+            </div>
+            <div class="contact-item">
+                <img src="img/icon_wechat.png">
+            </div>
+            <div class="contact-item">
+                <img src="img/icon_mail.png">
+            </div>
+        </div>-->
+        <!--        </div>-->
     </div>
 
     <!-- main content -->
@@ -160,15 +163,16 @@
 <!-- 项目js -->
 <script src="layer/layer.js"></script>
 
-<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+<script src="js/gooey.min.js"></script>
 <script src="js/router.js"></script>
 
 <script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 <script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
 <script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
 
-<!--<script src="js/common.js?v=202006180832591"></script>-->
 <script src="js/index.js"></script>
+<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
 </body>
 
 

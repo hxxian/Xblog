@@ -32,4 +32,5 @@ $(function() {
 	})
 	
 	mainVue.loadData();
+
 })
