@@ -13,7 +13,7 @@ $(function() {
 					this.diaryContent = data.diaryContent;
 					this.articles = data.articles;
 					this.titles = data.articleTitles;
-					console.log(this.titles)
+					// console.log(this.titles)
 					for (let i = 0; i < this.articles.length; i++) {
 						let times = formatDate(this.articles[i].publishTimestamp)
 						this.articles[i]['formatTime'] = times[1] + '月 ' + times[2] + ', ' + times[0]; 
