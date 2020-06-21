@@ -22,7 +22,27 @@ $(function() {
 							}
 						}
 					}
+				});
+
+				loadContribution().then(res => {
+					let weeks = res.data.weeks;
+					for (let i = 0; i < weeks.length; i++) {
+						for (let j = 0; j < weeks[i].daysOfWeek.length; j++) {
+							let core = weeks[i].daysOfWeek[j].core;
+							weeks[i].daysOfWeek[j].bgColor = getBackgroundColor(core);
+
+							let dayArr = formatDate(weeks[i].daysOfWeek[j].timestamp);
+
+							weeks[i].daysOfWeek[j].title = weeks[i].daysOfWeek[j].contributeCount
+								+ ' activity on ' + dayArr[2] + ", " + dayArr[1] + ", " + dayArr[0];
+						}
+					}
+					this.weeks = weeks;
 				})
+			},
+			showDayItemInfo: function(id) {
+			},
+			hideDayItemInfo: function() {
 			},
 			gotoArticleDetail: function(aid) {
 				window.location.href = "./article.html?articleId=" + aid;
@@ -30,18 +50,19 @@ $(function() {
 		}
 	})
 
-	archive.weeks = getWeeksOfYear();
 	archive.loadData();
 })
 
-function getWeeksOfYear() {
-	let obj = {
-		'date': '2020-05-01',
-		'content': 'test op'
+function getBackgroundColor(core) {
+	if (core <=0 ) {
+	    return '#ffffff';
+	} else if (core <= 25) {
+	    return '#c6e48b';
+	} else if (core <= 50) {
+		return '#7bc96f';
+	} else if (core <= 75) {
+		return '#239a3b';
+	} else {
+		return '#196127';
 	}
-	let weeks = [];
-	for (var i = 0; i < 52; i++) {
-		weeks[i] = obj;
-	}
-	return weeks;
 }

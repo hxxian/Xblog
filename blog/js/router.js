@@ -2,45 +2,26 @@ var DEBUG = false;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "https://www.hxxian.cn:448/xbloger/";
 
 /**
+ * 加载博客活动动态数据
+ *
+ * @returns {Promise<unknown>}
+ */
+function loadContribution() {
+	return getJson('contribution/list', {})
+}
+
+/**
  * 加载归档页数据
  */
 function loadArchiveData() {
-	return new Promise(function(resolve, reject) {
-		$.ajax({
-			url: basePath + 'article/archives',
-			type: 'get',
-			dataType: 'json',
-			statusCode: {
-				200: function(data) {
-					resolve(data)
-				},
-				404: function() {
-					reject()
-				}
-			}
-		})
-	})
+	return getJson('article/archives', {});
 }
 
 /**
  * 加载首页数据
  */
 function loadHomeData() {
-	return new Promise(function(resolve, reject) {
-		$.ajax({
-			url: basePath + 'home/',
-			type: 'get',
-			dataType: 'json',
-			statusCode: {
-				200: function(data) {
-					resolve(data)
-				},
-				404: function() {
-					reject()
-				}
-			}
-		})
-	})
+	return getJson('home/', {});
 }
 
 /**
@@ -49,36 +30,14 @@ function loadHomeData() {
  * @param {Object} aid
  */
 function loadArticleById(aid) {
-	return new Promise(function(resolve, reject) {
-		$.ajax({
-			url: basePath + 'article/info/' + aid,
-			type: 'get',
-			dataType: 'json',
-			statusCode: {
-				200: function(data) {
-					resolve(data)
-				}
-			}
-		})
-	})
+	return getJson('article/info/' + aid, {});
 }
 
 /**
  * 查询文章分类
  */
 function loadArticleTypes() {
-	return new Promise(function(resolve, reject){
-		$.ajax({
-			url: basePath + 'article/type/list',
-			type: 'get',
-			dataType: 'json',
-			statusCode: {
-				200: function(data) {
-					resolve(data)
-				}
-			}
-		})
-	})
+	return getJson('article/type/list', {});
 }
 
 /**
@@ -88,19 +47,27 @@ function loadArticleTypes() {
  * @param {Object} page
  */
 function loadArticleTitlesByTypeId(typeId, page) {
+	let data = {
+			typeId, typeId
+		}
+	return getJson('article/page/' + page, data);
+}
+
+function getJson(url, data) {
 	return new Promise(function(resolve, reject) {
 		$.ajax({
-			url: basePath + 'article/page/' + page,
+			url: basePath + url,
 			type: 'get',
-			data: {
-				typeId, typeId
-			},
 			dataType: 'json',
+			data: data,
 			statusCode: {
-				200: function(data) {
-					resolve(data)
+				200: function(res) {
+					resolve(res);
+				},
+				404: function() {
+					resolve(false);
 				}
 			}
 		})
-	})
+	});
 }

@@ -48,19 +48,13 @@
 
 						<div class="activity-items">
 							<div class="week-items" v-for="w in weeks">
-								<span class="day-item"></span>
-								<span class="day-item"></span>
-								<span class="day-item"></span>
-								<span class="day-item"></span>
-								<span class="day-item"></span>
-								<span class="day-item"></span>
-								<span class="day-item"></span>
+								<span :id="d.timestamp" class="day-item" v-for="d in w.daysOfWeek" :title="d.title" :style="{background: d.bgColor}" @mouseenter="showDayItemInfo(d.timestamp)"></span>
 							</div>
 						</div>
 
 						<div class="activity-color-tip col-lg-12">
 							<span>Less</span>
-							<span class="color-tip-item" style="background-color: #ebedf0;"></span>
+							<span class="color-tip-item" style="background-color: #ffffff;"></span>
 							<span class="color-tip-item" style="background-color: #c6e48b;"></span>
 							<span class="color-tip-item" style="background-color: #7bc96f;"></span>
 							<span class="color-tip-item" style="background-color: #239a3b;"></span>
@@ -116,7 +110,9 @@
 		<script src="js/gooey.min.js"></script>
 		<script src="layer/layer.js"></script>
 
-		<script src="js/router.js"></script>
+<!--		<script src="js/router.js"></script>-->
+		<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+
 
 		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
@@ -124,7 +120,7 @@
 		<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
 
 <!--		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/archive.js"></script>
+		<script src="js/archive.js?v=20200621140659"></script>
 		<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
 	</body>
 </html>
