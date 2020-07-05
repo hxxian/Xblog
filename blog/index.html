@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
     <link rel="stylesheet" type="text/css" href="css/anim.css"/>
-    <title>首页|浮晓悠羡</title>
+    <title>首页 | 浮晓悠羡</title>
 </head>
 <body>
 <div class="container-fluid" id="bloger">
@@ -79,9 +79,13 @@
 
     <!-- main content -->
     <div class="main-content">
-        <div class="content-left">
+        <div class="content-left col-lg-7 col-sm-12">
 
-            <div v-for="a in articles" class="left-item col-lg-11">
+            <div v-for="(a, idx) in articles" class="left-item col-lg-11 col-sm-11">
+
+                <div class="article-banner">
+                    <img :src="'http://cdn.hxxian.cn/static/image/home-article-banner' + (idx + 1) + '.jpg'" alt=""/>
+                </div>
 
                 <div class="item-title-box">
                     <p class="line"></p>
@@ -104,7 +108,7 @@
 
         </div>
 
-        <div class="content-right">
+        <div class="content-right col-lg-3 col-sm-12">
             <!-- 关于我 -->
             <div class="right-item col-lg-12">
                 <div class="item-title-box-right">
@@ -112,8 +116,7 @@
                     <p class="title">关于我</p>
                 </div>
                 <div class="me-qrcode">
-                    <img src="img/qrcode.jpg">
-                    <span>关注微信公众号</span>
+                    <img src="img/follow_wechat.gif">
                 </div>
                 <p class="aboutme-content">在这安静的黑夜里，我只想做一名极客~</p>
             </div>
