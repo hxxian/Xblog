@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900" />
 		<link rel="stylesheet" type="text/css" href="css/article-list.css" />
 		<link rel="stylesheet" type="text/css" href="css/anim.css" />
-		<title>文章|浮晓悠羡</title>
+		<title>文章 | 浮晓悠羡</title>
 	</head>
 	<body>
 		<div class="container-fluid" id="bloger">
@@ -57,9 +57,11 @@
 					</div>
 					<!-- 文章列表 -->
 					<div class="article-list-box col-lg-9 col-sm-9">
-						<div v-for="t in titleList" class="article-item" @click="gotoArticle(t.articleId)">
+						<div v-for="t in titleList" class="article-item">
 							<span>&#10022&nbsp;</span>
-							<span>{{t.articleTitle}}</span>
+							<span @click="gotoArticle(t.articleId)">{{t.articleTitle}}</span>
+							<span class="read-count">({{t.readCount}})</span>
+
 						</div>
 					</div>
 					<div class="page-nav col-lg-12 col-sm-12 flex-row content-end">

@@ -7,6 +7,9 @@ $(function() {
 			return {}
 		},
 		methods: {
+			gotoGWBeian: function() {
+					window.open("http://www.beian.gov.cn/portal/registerSystemInfo")
+			},
 			gotoICPSystem: function() {
 				// window.location.href = "http://www.beian.miit.gov.cn/publish/query/indexFirst.action";
 				window.open("http://www.beian.miit.gov.cn");
@@ -65,10 +68,11 @@ var footer =
 	'		</div> ' +
 	'	</div> ' +
 	'	<div class="record-info flex-row content-center"> ' +
-	'		©2020-浮晓悠羡&nbsp;&nbsp;&nbsp;<span class="icp" @click="gotoICPSystem()">粤ICP备&nbsp;20036399号</span>' +
+	'		©2020-浮晓悠羡&nbsp;&nbsp;&nbsp;<span class="icp" @click="gotoICPSystem()">粤ICP备&nbsp;20036399号</span> ' +
+	'		<img src="img/beian_icon.png"/><span class="icp" @click="gotoGWBeian()">粤公网安备 44010602008182号</span>' +
 	'	</div> ' +
 	'</div> ';
-// <img src="img/beian_icon.png"/>公网安备 xxxxxxxxxx号 
+// <img src="img/beian_icon.png"/>粤公网安备 44010602008182号
 var wxqrcode = {
 	"title": "微信二维码", 
 	"id": 1, 

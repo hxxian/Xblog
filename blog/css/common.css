@@ -1,3 +1,14 @@
+/* 字体定义 */
+@font-face {
+	font-family: myfont1;
+	src: url("../fonts/myfont1.ttf");
+}
+
+@font-face {
+	font-family: myfont2;
+	src: url("../fonts/myfont2.ttf");
+}
+
 .container-fluid {
 	padding: 0px;
 	margin: 0px;
@@ -9,6 +20,37 @@
 	/* background-image: url(../img/article-list.jpg); */
 	background-repeat: no-repeat;
 	background-position: center;
+}
+
+.blog-name {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.blog-name span {
+	font-size: 48px;
+	color: #FFFFFF;
+	/*font-weight: 600;*/
+	font-family:myfont1;
+	text-shadow: 5px 2px 6px #000;
+}
+
+.blog-desc span {
+	font-size: 16px;
+	color: #FFFFFF;
+	text-shadow: 5px 2px 6px #000;
+	font-family:myfont1;
+}
+
+.title-line {
+	height: 4px;
+	background-color: #269ABC;
+	width: 80px;
+	border-bottom: #009ABB;
+	margin-bottom: 16px;
 }
 
 /* 页头 */
@@ -75,7 +117,8 @@
 
 .menu-item {
 	color: #666;
-	font-size: 15px;
+	font-size: 2.2rem;
+	font-family: myfont2;
 	margin-left: 35px;
 	display: inline-flex;
 	flex-direction: column;

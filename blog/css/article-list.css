@@ -17,7 +17,7 @@ body {
 	margin-top: 50px;
 }
 
-.blog-name {
+/*.blog-name {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -39,7 +39,7 @@ body {
 	width: 80px;
 	border-bottom: #009ABB;
 	margin-bottom: 16px;
-}
+}*/
 
 /* 主题内容 */
 .main-content {
@@ -152,6 +152,11 @@ body {
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	border-bottom: 1px dashed #666666;
+}
+
+span.read-count {
+	font-size: 1rem;
+	margin-left: 16px;
 }
 
 /* 页码 */
