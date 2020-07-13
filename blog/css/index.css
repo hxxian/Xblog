@@ -3,7 +3,7 @@ body {
 }
 
 .screen-content {
-	height: 640px;
+	height: 720px;
 	width: 100%;
 	position: relative;
 }
@@ -24,9 +24,10 @@ body {
 }
 
 .avatar-container {
-	width: 100%;
-	position: absolute;
-	top: 100px;
+	/*width: 100%;*/
+	/*position: absolute;*/
+	/*bottom: 220px;*/
+	/*left: 190px;*/
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -96,6 +97,37 @@ body {
 	height: 28px;
 }
 
+.header-motto-box {
+	position: absolute;
+	width: 100%;
+	top: 150px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.head-motto {
+	/*background: rgba(255,255,255,0.6);*/
+	border-radius: 10px;
+	min-height: 200px;
+	position: relative;
+	color: #FFFFFF;
+}
+
+.head-motto p {
+	font-family: myfont2;
+	font-size: 2.5rem;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.head-motto span {
+	font-family: myfont1;
+	position: absolute;
+	right: 5rem;
+	bottom: 2rem;
+	font-size: 1.5rem;
+}
 
 /* 主题内容样式start */
 .main-content {
@@ -183,6 +215,7 @@ body {
 	position: absolute;
 	top: 20px;
 	letter-spacing: 3px;
+	font-family: myfont2;
 }
 
 .left-item .article-title {
@@ -263,6 +296,7 @@ span.tag-content {
 	line-height: 22px;
 	margin-top: 15px;
 	letter-spacing: 2px;
+	font-family: myfont1;
 }
 
 .me-qrcode {
@@ -324,12 +358,31 @@ span.tag-content {
 }
 
 .motto .motto-content {
+	position: relative;
 	margin-top: 60px;
 	padding: 0 40px 0px 40px;
 	letter-spacing: 2px;
 	/* overflow: hidden; */
 	/* text-overflow: ellipsis; */
 	/* max-height: 100px; */
+}
+
+.motto .motto-content img {
+	width: 100%;
+	margin-bottom: 18px;
+}
+
+.motto .motto-content p {
+	font-family: myfont1;
+	font-size: 1.5rem;
+}
+
+.motto .motto-content span {
+	position: absolute;
+	right: 10px;
+	/*bottom: 0px;*/
+	font-family: myfont1;
+	font-size: 1rem;
 }
 
 .article-banner {

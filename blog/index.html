@@ -29,6 +29,11 @@
     <div class="screen-content">
         <!-- 标题内容 -->
         <div class="blog-title">
+            <div class="avatar-container">
+                <div class="avatar-box flex-center">
+                    <img src="img/me.jpg">
+                </div>
+            </div>
             <div class="blog-name">
                 <span>浮晓悠羡</span>
                 <div class="title-line">
@@ -41,11 +46,11 @@
         </div>
 
         <!-- 博主头像 -->
-        <div class="avatar-container">
+       <!-- <div class="avatar-container">
             <div class="avatar-box flex-center">
                 <img src="img/me.jpg">
             </div>
-        </div>
+        </div>-->
 
         <!-- 搜索框 -->
         <!--        <div class="search-container">-->
@@ -75,6 +80,14 @@
             </div>
         </div>-->
         <!--        </div>-->
+
+    </div>
+
+    <div class="header-motto-box">
+        <div class="head-motto col-md-4 col-sm-6">
+            <p id="motto" v-html="diaryContent"></p>
+            <span>——{{diaryDate}}</span>
+        </div>
     </div>
 
     <!-- main content -->
@@ -118,7 +131,7 @@
                 <div class="me-qrcode">
                     <img src="img/follow_wechat.gif">
                 </div>
-                <p class="aboutme-content">在这安静的黑夜里，我只想做一名极客~</p>
+                <p class="aboutme-content">习惯自律的人，上天自会有所安排~</p>
             </div>
 
             <!-- 最新评论 -->
@@ -145,7 +158,9 @@
                     <p class="title">语录摘</p>
                 </div>
                 <div class="motto-content">
-                    <span>{{diaryContent}}</span>
+                    <img src="img/banner2.jpg" alt="">
+                    <p v-html="diaryContent"></p>
+                    <span>——{{diaryDate}}</span>
                 </div>
             </div>
         </div>

@@ -3,7 +3,7 @@ body {
 }
 
 .screen-content {
-	height: 640px;
+	height: 720px;
 	width: 100%;
 	position: relative;
 }
@@ -178,6 +178,7 @@ body {
 	flex-direction: row;
 	justify-content: flex-end;
 	padding-right: 30px;
+	color: #FFFFFF;
 }
 
 .color-tip-item {
