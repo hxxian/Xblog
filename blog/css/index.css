@@ -425,7 +425,18 @@ span.tag-content {
         padding-top: 70px;
     }
 
+    .main-content {
+        flex-direction: column;
+    }
+
     .content-right {
-        display: none;
+        /*display: none;*/
+        /*width: 100%;*/
+        display: block;
+        text-align: center;
+    }
+
+    .right-item {
+        margin: 0 auto;
     }
 }

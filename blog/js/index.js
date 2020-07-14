@@ -34,6 +34,9 @@ $(function() {
 			},
 			gotoArticleDetail: function(articleId) {
 				window.location.href = "./article.html?articleId=" + articleId;
+			},
+			gotoArticleList: function (typeId, typeName) {
+				window.location.href = "./article-list.html?typeId=" + typeId + "&typeName=" + encodeURI(typeName);
 			}
 		}
 	})
