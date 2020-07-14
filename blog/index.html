@@ -151,6 +151,23 @@
 
             </div>
 
+            <!-- 文章分类 -->
+            <div class="article-type right-item col-lg-12">
+                <div class="item-title-box-right">
+                    <p class="line"></p>
+                    <p class="title">文章分类</p>
+                </div>
+                <div class="article-type-list col-md-10">
+                    <div class="type-item" v-for="t in articleTypes">
+                        <div>
+                            <span>&#10022&nbsp;</span>
+                            <span>{{t.typeName}}</span>
+                        </div>
+                        <span>({{t.articleCount}})</span>
+                    </div>
+                </div>
+            </div>
+
             <!-- 语录摘 -->
             <div class="motto right-item col-lg-12">
                 <div class="item-title-box-right">
@@ -163,6 +180,7 @@
                     <span>——{{diaryDate}}</span>
                 </div>
             </div>
+
         </div>
     </div>
 

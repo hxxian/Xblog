@@ -6,17 +6,20 @@ $(function() {
 			diaryContent: "博主比较懒，什么都没有留下...",
 			diaryDate: '',
 			articles: [],
-			titles: []
+			titles: [],
+			articleTypes: []
 		},
 		methods: {
 			loadData: function() {
 				loadHomeData().then(data => {
+					console.log(data)
 					let diaryTime = data.diaryTimestamp;
 					let date = formatDate(diaryTime);
 					this.diaryDate = date[0] + '年' + appendZero(date[1]) + '月' + appendZero(date[2]) + '日'
 					this.diaryContent = data.diaryContent;
 					this.articles = data.articles;
 					this.titles = data.articleTitles;
+					this.articleTypes = data.articleTypes;
 					// console.log(this.titles)
 					for (let i = 0; i < this.articles.length; i++) {
 						let times = formatDate(this.articles[i].publishTimestamp)
