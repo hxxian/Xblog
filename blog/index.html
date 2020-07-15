@@ -123,7 +123,7 @@
 
         <div class="content-right col-lg-3 col-sm-12">
             <!-- 关于我 -->
-            <div class="right-item col-lg-12 col-sm-12">
+            <div class="aboutme right-item col-lg-12 col-sm-6">
                 <div class="item-title-box-right">
                     <p class="line"></p>
                     <p class="title">关于我</p>
@@ -135,7 +135,7 @@
             </div>
 
             <!-- 语录摘 -->
-            <div class="motto right-item col-lg-12 col-sm-11">
+            <div class="motto right-item col-lg-12 col-sm-5">
                 <div class="item-title-box-right">
                     <p class="line"></p>
                     <p class="title">语录摘</p>
@@ -153,7 +153,7 @@
                     <p class="line"></p>
                     <p class="title">热度文章</p>
                 </div>
-                <div class="latest-items">
+                <div class="latest-items col-sm-11">
 
                     <div v-for="t in titles" class="latest-item col-lg-12" @click="gotoArticleDetail(t.articleId)">
                         <p>#{{t.articleTitle}}</p>
@@ -165,7 +165,7 @@
             </div>
 
             <!-- 文章分类 -->
-            <div class="article-type right-item col-lg-12 col-sm-6">
+            <div class="article-type right-item col-lg-12 col-sm-5">
                 <div class="item-title-box-right">
                     <p class="line"></p>
                     <p class="title">文章分类</p>
