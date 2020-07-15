@@ -16,7 +16,7 @@
 
 .screen-content {
 	border-bottom: 1px dashed #cccccc;
-	background-image: url(../img/banner5.jpg);
+	background-image: url(http://cdn.hxxian.cn/static/image/xblog-banner.jpg);
 	/* background-image: url(../img/article-list.jpg); */
 	background-repeat: no-repeat;
 	background-position: center;
@@ -35,7 +35,7 @@
 	font-size: 48px;
 	color: #FFFFFF;
 	/*font-weight: 600;*/
-	font-family:myfont1;
+	font-family:myfont2;
 	text-shadow: 5px 2px 6px #000;
 }
 
@@ -43,7 +43,7 @@
 	font-size: 16px;
 	color: #FFFFFF;
 	text-shadow: 5px 2px 6px #000;
-	font-family:myfont1;
+	font-family:myfont2;
 }
 
 .title-line {

@@ -122,7 +122,7 @@ body {
 }
 
 .head-motto span {
-    font-family: myfont1;
+    font-family: myfont2;
     position: absolute;
     right: 5rem;
     bottom: 2rem;
@@ -296,7 +296,7 @@ span.tag-content {
     line-height: 22px;
     margin-top: 15px;
     letter-spacing: 2px;
-    font-family: myfont1;
+    font-family: myfont2;
 }
 
 .me-qrcode {
@@ -374,7 +374,7 @@ span.tag-content {
 }
 
 .motto .motto-content p {
-    font-family: myfont1;
+    font-family: myfont2;
     font-size: 1.5rem;
     text-align: start;
 }
@@ -383,7 +383,7 @@ span.tag-content {
     position: absolute;
     right: 10px;
     /*bottom: 0px;*/
-    font-family: myfont1;
+    font-family: myfont2;
     font-size: 1rem;
 }
 
