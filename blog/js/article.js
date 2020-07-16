@@ -22,7 +22,7 @@ $(function() {
 			loadArticle: function() {
 				layer.load(0, {shade: false});
 				if (!articleId) {
-					articleId = 1;
+					articleId = 11;
 				}
 				loadArticleById(articleId).then((data) => {
 					this.typeName = data.typeName;
@@ -32,7 +32,7 @@ $(function() {
 					let times = formatDate(data.publishTimestamp);
 					if (times) {
 						this.aMonth = appendZero(times[1]);
-						this.aDay = times[2];
+						this.aDay = appendZero(times[2]);
 						this.publishDate = times[0] + "-" + appendZero(times[1]) + "-" + appendZero(times[2]);
 					}
 					layer.closeAll('loading');

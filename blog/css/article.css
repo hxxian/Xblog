@@ -37,7 +37,7 @@ body {
 .float-article-container {
 	/*width: 1000px;*/
 	min-height: 600px;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.9);
 	border-radius: 6px;
 	position: relative;
 	/* top: -150px; */
@@ -129,7 +129,7 @@ body {
 
 .tag-item {
 	margin-right: 22px;
-	color: #999999;
+	color: #666666;
 }
 
 .tag-item .glyphicon {
@@ -308,13 +308,14 @@ body {
 	border-bottom: 3px solid #f5f8fa;
 	width: 100%;
 	padding-bottom: 40px;
+	margin-top: 30px;
 }
 
 .comment-item {
 	width: 850px;
 	display: flex;
 	flex-direction: row;
-	margin-top: 40px;
+	margin-top: 5px;
 	position: relative;
 }
 
@@ -323,7 +324,7 @@ body {
 	height: 68px;
 	position: absolute;
 	left: 24px;
-	top: 52px;
+	top: 50px;
 	background-color: #898c7b;
 }
 
