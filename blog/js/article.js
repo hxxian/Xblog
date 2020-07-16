@@ -16,7 +16,12 @@ $(function() {
 			closeTypeTag: 0,
 			replyShow: false,
 			readyReply: false,
-			replyBtnText: "回复"
+			replyBtnText: "回复",
+			nickname: '',
+			website: '',
+			email: '',
+			commentContent: '',
+			currCommentId: 0
 		},
 		methods: {
 			loadArticle: function() {
@@ -75,6 +80,23 @@ $(function() {
 				
 				$(".item-reply-btn").removeClass("cancel-reply");
 				$(".item-reply-btn").addClass("reply-btn");
+			},
+			submitComment: function () {
+				let data = {
+					articleId: articleId,
+					replyCommentId: this.currCommentId,
+					nickname: this.nickname,
+					email: this.email,
+					website: this.website,
+					content: this.commentContent
+				}
+
+				addComment(data).then(res => {
+					// 发表评论成功
+					if (res) {
+						console.log(res)
+					}
+				})
 			}
 		}
 	})

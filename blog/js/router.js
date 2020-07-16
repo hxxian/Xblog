@@ -1,5 +1,15 @@
-var DEBUG = false;
+var DEBUG = true;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "https://www.hxxian.cn:448/xbloger/";
+
+/**
+ * 发表评论
+ *
+ * @param data
+ * @returns {Promise<unknown>}
+ */
+function addComment(data) {
+	return postJson('comment', data);
+}
 
 /**
  * 加载博客活动动态数据
@@ -65,6 +75,30 @@ function getJson(url, data) {
 					resolve(res);
 				},
 				404: function() {
+					resolve(false);
+				}
+			}
+		})
+	});
+}
+function postJson(url, data) {
+	return new Promise(function(resolve, reject) {
+		$.ajax({
+			url: basePath + url,
+			type: 'post',
+			dataType: 'json',
+			data: data,
+			statusCode: {
+				201: function(res) {
+					resolve(res);
+				},
+				400: function() {
+					resolve(false);
+				},
+				401: function() {
+					resolve(false);
+				},
+				500: function () {
 					resolve(false);
 				}
 			}
