@@ -313,7 +313,7 @@
 	position: fixed;
 	right: -220px;
 	top: 50px;
-	z-index: 5;
+	z-index: 10;
 }
 
 .radius-menu span {

@@ -33,6 +33,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	margin-top: 150px;
+	padding-left: 100px;
 }
 
 .update-month-item {
@@ -44,7 +45,7 @@ body {
 
 .archive-month-tag {
 	display: inline-block;
-	margin-left: -180px;
+	margin-left: -150px;
 	position: absolute;
 	top: 30px;
 }
@@ -190,6 +191,10 @@ body {
 
 /******* 移动设备下（包括ipad）个别样式的定义 *******/
 @media screen and (max-width: 1080px) {
+	.update-month-item {
+		min-width: 60%;
+	}
+
 	.week-items .day-item {
 		width: 1.0rem;
 		height: 1.0rem;
