@@ -21,7 +21,13 @@ $(function() {
 			website: '',
 			email: '',
 			commentContent: '',
-			currCommentId: 0
+			currCommentId: 0,
+			commentSessions: [],
+			mouseEnterCommentId: 0,
+			currSelectCommentId: 0,
+			replyShow: false,
+			readyReply: false,
+			replyBtnText: "回复"
 		},
 		methods: {
 			loadArticle: function() {
@@ -53,17 +59,19 @@ $(function() {
 					this.closeTypeTag = 2;
 				}
 			},
-			itemMouseEnter: function(idx) {
-				this.replyShow = true;
+			itemMouseEnter: function(commentId) {
+				this.mouseEnterCommentId = commentId;
 			},
-			itemMouseLeave: function(idx) {
-				this.replyShow = false;
+			itemMouseLeave: function(commentId) {
+				this.mouseEnterCommentId = 0;
 			},
-			showReplyBox: function() {
+			showReplyBox: function(commentId) {
 				if (this.readyReply) {
+					this.currSelectCommentId = 0;
 					this.hideReplyBox();
 					return;
 				}
+				this.currSelectCommentId = commentId;
 				this.readyReply = true;
 				this.replyBtnText = "取消回复";
 				$(".bottom-send-box").removeClass("top-leave");
@@ -97,9 +105,18 @@ $(function() {
 						console.log(res)
 					}
 				})
+			},
+			loadComments: function () {
+				loadComments(articleId).then(res => {
+					console.log(res);
+					if (res) {
+						this.commentSessions = res.data;
+					}
+				})
 			}
 		}
 	})
 	
 	vue.loadArticle();
+	vue.loadComments();
 })

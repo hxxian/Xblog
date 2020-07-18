@@ -386,3 +386,27 @@ body {
 	justify-content: center;
 	background-color: #ebf6f7;
 }
+
+.empty-comment {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border-top: 1px dashed #cccccc;
+	padding-top: 20px;
+}
+
+.empty-comment span {
+	font-size: 1rem;
+	letter-spacing: 2px;
+}
+
+.show-comments {
+	border-bottom: 1px solid #999999;
+	padding-bottom: 5px;
+}
+
+.show-comments:hover {
+	cursor: pointer;
+	color: #1E9FFF;
+}

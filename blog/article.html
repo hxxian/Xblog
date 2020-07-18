@@ -1,228 +1,190 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<!-- 页面标签图标 -->
-		<link rel="icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<!-- CDN css文件 -->
-		<!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
-		<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/gooey.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/H-ui.reset.css" />
+<head>
+    <meta charset="utf-8"/>
+    <!-- 页面标签图标 -->
+    <link rel="icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <!-- CDN css文件 -->
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/H-ui.reset.css"/>
 
-		<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
-			  rel='stylesheet' type='text/css'/>
-<!--		<link rel='stylesheet' type='text/css' href="css/github.css"/>-->
-		<link rel='stylesheet' type='text/css' href="css/typora-base.css"/>
-		<link rel='stylesheet' type='text/css' href="css/orangeheart.css?v=20200705233400"/>
+    <link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext'
+          rel='stylesheet' type='text/css'/>
+    <!--		<link rel='stylesheet' type='text/css' href="css/github.css"/>-->
+    <link rel='stylesheet' type='text/css' href="css/typora-base.css"/>
+    <link rel='stylesheet' type='text/css' href="css/orangeheart.css?v=20200705233400"/>
 
-		<!-- 项目css -->
-		<link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900" />
-		<link rel="stylesheet" type="text/css" href="css/anim.css" />
-		<link rel="stylesheet" type="text/css" href="css/article.css" />
-		<title>文章详情 | 浮晓悠羡</title>
-	</head>
-	<body>
-		<div class="container-fluid" id="bloger">
-			<!-- 顶部导航 -->
-			<nav-menu></nav-menu>
-			<!-- 圆形悬浮导航 -->
-			<float-nav-menu></float-nav-menu>
+    <!-- 项目css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900"/>
+    <link rel="stylesheet" type="text/css" href="css/anim.css"/>
+    <link rel="stylesheet" type="text/css" href="css/article.css"/>
+    <title>文章详情 | 浮晓悠羡</title>
+</head>
+<body>
+<div class="container-fluid" id="bloger">
+    <!-- 顶部导航 -->
+    <nav-menu></nav-menu>
+    <!-- 圆形悬浮导航 -->
+    <float-nav-menu></float-nav-menu>
 
-			<div class="screen-content">
-				<!-- 标题内容 -->
-				<div class="blog-title">
-					<div class="blog-name">
-						<span>Article</span>
-						<div class="title-line">
+    <div class="screen-content">
+        <!-- 标题内容 -->
+        <div class="blog-title">
+            <div class="blog-name">
+                <span>Article</span>
+                <div class="title-line">
 
-						</div>
-					</div>
-				</div>
-			</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="main-content">
+    <div class="main-content">
 
-				<div class="float-article-container col-lg-7 col-sm-11">
-					<!-- 大日期 -->
-					<div class="article-date-box">
-						<span class="month">{{aMonth}}</span>
-						<span class="day">{{aDay}}</span>
-					</div>
+        <div class="float-article-container col-lg-7 col-sm-11">
+            <!-- 大日期 -->
+            <div class="article-date-box">
+                <span class="month">{{aMonth}}</span>
+                <span class="day">{{aDay}}</span>
+            </div>
 
-					<div class="article-type-tag">
-						<span>&#9672&nbsp;{{typeName}}</span>
-						<div class="triangle">
+            <div class="article-type-tag">
+                <span>&#9672&nbsp;{{typeName}}</span>
+                <div class="triangle">
 
-						</div>
-					</div>
+                </div>
+            </div>
 
-					<!-- 文章title -->
-					<div class="type-box col-lg-9">
-						<span>#{{articleTitle}}</span>
-					</div>
-					<div class="article-tag-box col-lg-9">
-						<div class="tag-item">
-							<span class="glyphicon glyphicon-user"></span>
-							<span>舞零</span>
-						</div>
-						<div class="tag-item">
-							<span class="glyphicon glyphicon-calendar"></span>
-							<span>发表于{{publishDate}}</span>
-						</div>
-						<div class="tag-item">
-							<span class="glyphicon glyphicon-eye-open"></span>
-							<span>浏览次数{{readCount}}</span>
-						</div>
-					</div>
-					<!-- 文章内容 -->
-					<div class="article-content">
-						<div class="content" v-html="articleContent">
-						</div>
-						<!--<div class="end-line">
-							<span>THE END</span>
-						</div>-->
-						<!-- <div class="link-article">
-							<span>
-								<<&nbsp二维码扫码登录原理</span> <span>面向对象与面向过程的争逐&nbsp>>
-							</span>
-						</div> -->
-					</div>
+            <!-- 文章title -->
+            <div class="type-box col-lg-9">
+                <span>#{{articleTitle}}</span>
+            </div>
+            <div class="article-tag-box col-lg-9">
+                <div class="tag-item">
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span>舞零</span>
+                </div>
+                <div class="tag-item">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <span>发表于{{publishDate}}</span>
+                </div>
+                <div class="tag-item">
+                    <span class="glyphicon glyphicon-eye-open"></span>
+                    <span>浏览次数{{readCount}}</span>
+                </div>
+            </div>
+            <!-- 文章内容 -->
+            <div class="article-content">
+                <div class="content" v-html="articleContent">
+                </div>
+                <!--<div class="end-line">
+                    <span>THE END</span>
+                </div>-->
+                <!-- <div class="link-article">
+                    <span>
+                        <<&nbsp二维码扫码登录原理</span> <span>面向对象与面向过程的争逐&nbsp>>
+                    </span>
+                </div> -->
+            </div>
 
-					<!-- 评论区 -->
-					 <div class="comment-container">
-						<!-- 填写评论信息 -->
-						 <div class="comment-send-box col-lg-12">
-							<img src="img/me.jpg" />
-							<div class="comment-inputs">
-								<div class="flex-row content-between">
-									<input class="form-control" v-model="nickname" placeholder="*昵称" />
-									<input class="form-control" v-model="email" placeholder="*电子邮件" />
-									<input class="form-control" v-model="website" placeholder="个人站点" />
-								</div>
-								<textarea v-model="commentContent" class="form-control col-lg-12" rows="4"
-								placeholder="*如有疑问或者建议,欢迎你的留言哦~博主会通过你留下的邮件回复你哦!如果你有个人站点,可以留下互相友情链接哦!"></textarea>
-								<div class="submit-box">
-									<button @click="submitComment()" class="btn btn-default">提交</button>
-								</div>
-							</div>
-						</div>
+            <!-- 评论区 -->
+            <div class="comment-container">
+                <!-- 填写评论信息 -->
+                <div class="comment-send-box col-lg-12">
+                    <img src="img/me.jpg"/>
+                    <div class="comment-inputs">
+                        <div class="flex-row content-between">
+                            <input class="form-control" v-model="nickname" placeholder="*昵称"/>
+                            <input class="form-control" v-model="email" placeholder="*电子邮件"/>
+                            <input class="form-control" v-model="website" placeholder="个人站点"/>
+                        </div>
+                        <textarea v-model="commentContent" class="form-control col-lg-12" rows="4"
+                                  placeholder="*如有疑问或者建议,欢迎你的留言哦~博主会通过你留下的邮件回复你哦!如果你有个人站点,可以留下互相友情链接哦!"></textarea>
+                        <div class="submit-box">
+                            <button @click="submitComment()" class="btn btn-default">提交</button>
+                        </div>
+                    </div>
+                </div>
 
-						<!-- 评论 -->
-						 <div class="comment-list-box col-lg-12" id="comment">
-							<div class="comments-session">
-								<div class="comment-item">
-									<img src="img/me.jpg" />
-									<div class="link-line">
+                <!-- 评论 -->
+                <div class="comment-list-box col-lg-12" id="comment">
+                    <div class="empty-comment">
+                        <span v-if="!commentSessions">暂无评论~</span>
+<!--                        <span v-else class="show-comments" @click="loadComments()">查看（5）条评论</span>-->
+                    </div>
+                    <div class="comments-session" v-for="s in commentSessions">
+                        <div class="comment-item" v-for="(c, idx) in s.comments" @mouseenter="itemMouseEnter(c.commentId)" @mouseleave="itemMouseLeave(0)">
+                            <img src="img/me.jpg" />
+                            <div class="link-line" v-if="idx < s.comments.length - 1">
 
-									</div>
-									<div class="comment-infos">
-										<p class="nickname">舞零</p>
-										<p class="time">2020/04/22 22:10</p>
-										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-									</div>
-								</div>
-								<div class="comment-item">
-									<img src="img/me.jpg" />
-									<div class="link-line">
+                            </div>
 
-									</div>
-									<div class="comment-infos">
-										<p class="nickname">舞零</p>
-										<p class="time">2020/04/22 22:10</p>
-										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-									</div>
-								</div>
-								<div class="comment-item">
-									<img src="img/me.jpg" />
-									<div class="link-line">
+                            <div class="reply-btn-box" @click="showReplyBox(c.commentId)" v-show="mouseEnterCommentId == c.commentId || currSelectCommentId == c.commentId">
+                                <button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
+                            </div>
 
-									</div>
-									<div class="comment-infos">
-										<p class="nickname">舞零</p>
-										<p class="time">2020/04/22 22:10</p>
-										<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-									</div>
-								</div>
-							</div>
+                            <div class="comment-infos">
+                                <p class="nickname">{{c.nickname}}</p>
+                                <p class="time">{{c.gmtCreate}}</p>
+                                <p class="content">{{c.content}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-							 <div class="comments-session">
-								 <div class="comment-item">
-									 <img src="img/me.jpg" />
-									 <div class="link-line">
+        <!-- 底部弹出评论 -->
+        <div class="bottom-send-box">
+            <div class="comment-container">
+                <div class="comment-send-box col-lg-12">
+                    <img src="img/me.jpg"/>
+                    <div class="comment-inputs">
+                        <div class="flex-row content-between">
+                            <input class="form-control" placeholder="*昵称"/>
+                            <input class="form-control" placeholder="*电子邮件"/>
+                            <input class="form-control" placeholder="个人站点"/>
+                        </div>
+                        <textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
 
-									 </div>
-									 <div class="comment-infos">
-										 <p class="nickname">舞零</p>
-										 <p class="time">2020/04/22 22:10</p>
-										 <p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-									 </div>
-								 </div>
-								 <div class="comment-item">
-									 <img src="img/me.jpg" />
-									 <div class="link-line">
+                        <div class="submit-box">
+                            <button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
+                            <button class="btn btn-default">回复</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-									 </div>
-									 <div class="comment-infos">
-										 <p class="nickname">舞零</p>
-										 <p class="time">2020/04/22 22:10</p>
-										 <p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-									 </div>
-								 </div>
-							 </div>
-						</div>
-					</div>
-				</div>
+    </div>
 
-				<!-- 底部弹出评论 -->
-				 <div class="bottom-send-box">
-					<div class="comment-container">
-						<div class="comment-send-box col-lg-12">
-							<img src="img/me.jpg" />
-							<div class="comment-inputs">
-								<div class="flex-row content-between">
-									<input class="form-control" placeholder="*昵称" />
-									<input class="form-control" placeholder="*电子邮件" />
-									<input class="form-control" placeholder="个人站点" />
-								</div>
-								<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
+    <!-- 回顶部按钮 -->
+    <back-top></back-top>
 
-								<div class="submit-box">
-									<button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
-									<button class="btn btn-default">回复</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+    <!--页脚  -->
+    <nav-footer></nav-footer>
+</div>
+<!-- CDN js依赖文件 -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-			 </div>
+<!-- 项目js -->
+<script src="js/gooey.min.js"></script>
+<script src="layer/layer.js"></script>
 
-			<!-- 回顶部按钮 -->
-			<back-top></back-top>
+<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
 
-			<!--页脚  -->
-			<nav-footer></nav-footer>
-		</div>
-		<!-- CDN js依赖文件 -->
-		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
-		<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
 
-		<!-- 项目js -->
-		<script src="js/gooey.min.js"></script>
-		<script src="layer/layer.js"></script>
-
-		<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
-
-		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
-
-		<script src="js/article.js"></script>
-		<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
-	</body>
+<script src="js/article.js"></script>
+<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+</body>
 </html>

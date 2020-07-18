@@ -1,6 +1,17 @@
 var DEBUG = true;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "https://www.hxxian.cn:448/xbloger/";
 
+
+/**
+ * 加载文章评论
+ *
+ * @param articleId
+ * @returns {Promise<unknown>}
+ */
+function loadComments(articleId) {
+	return getJson(`comment/list/aid/${articleId}`, {});
+}
+
 /**
  * 发表评论
  *
