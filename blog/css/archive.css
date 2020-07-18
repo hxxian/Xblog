@@ -37,7 +37,7 @@ body {
 }
 
 .update-month-item {
-	border-left: 1px solid #00313C;
+	border-left: 1px solid #CCCCCC;
 	position: relative;
 	margin-bottom: 60px;
 	width: 50%;
@@ -45,31 +45,39 @@ body {
 
 .archive-month-tag {
 	display: inline-block;
-	margin-left: -150px;
 	position: absolute;
-	top: 30px;
+	top: 10px;
+	left: -25px;
+	/*font-family: JosefinSans;*/
 }
 
 .archive-month-tag span {
-	font-size: 20px;
-	font-weight: bolder;
-	color: #009ABB;
+	font-size: 3.5rem;
+	font-weight: bold;
+	color: #000000;
 	letter-spacing: 2px;
+	font-family: myfont2;
 }
 
 .tag-header-icon {
-	background-color: #FFFFFF;
-	width: 14px;
-	height: 14px;
+	background-color: #c4cfd4;
+	width: 34px;
+	height: 20px;
 	position: absolute;
-	top: 40px;
-	left: -8px;
-	border-radius: 50%;
-	border: 1px solid #d4d3d3;
+	top: 80px;
+	left: -18px;
+	border-radius: 30px;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+	font-family: 'cursive';
 }
 
 .update-day-list {
-	margin-top: 32px;
+	margin-top: 70px;
+	margin-left: 30px;
 }
 
 .update-day-item {
@@ -80,19 +88,37 @@ body {
 	margin-top: 20px;
 }
 
+
 .update-day-item .item-left {
 	height: 100%;
-	border: 1px solid #d4d3d3;
+	/*border: 1px solid #d4d3d3;*/
 	box-sizing: border-box;
 	padding: 10px 18px;
-	margin-left: 20px;
-	color: #666666;
+	/*margin-left: 20px;*/
+
 }
 
 .update-day-item .item-left:hover {
-	border: 1px solid #009ABB;
+	/*border: 1px solid #009ABB;*/
 	color: #009ABB;
 	cursor: pointer;
+}
+
+.title-text {
+	color: #666666;
+	font-size: 1.4rem;
+	font-weight: 500;
+	font-family: JosefinSans;
+}
+
+.title-text:hover {
+	/*font-weight: bold;*/
+	color: #82aaff;
+}
+
+.title-date {
+	font-size: 1rem;
+	color: #4facfe;
 }
 
 .update-day-item .item-right {
@@ -192,7 +218,7 @@ body {
 /******* 移动设备下（包括ipad）个别样式的定义 *******/
 @media screen and (max-width: 1080px) {
 	.update-month-item {
-		min-width: 60%;
+		min-width: 100%;
 	}
 
 	.week-items .day-item {
@@ -208,5 +234,31 @@ body {
 		height: 12px;
 		background-color: #ebedf0;
 		margin-left: 4px;
+	}
+
+	.archive-month-tag span {
+		font-size: 4.5rem;
+	}
+
+	.tag-header-icon {
+		width: 40px;
+		height: 25px;
+		position: absolute;
+		top: 100px;
+		left: -18px;
+		font-size: 1.5rem;
+	}
+
+	.update-day-list {
+		margin-top: 86px;
+	}
+
+	.title-date {
+		font-size: 2.0rem;
+	}
+
+	.title-text {
+		font-size: 2.3rem;
+		font-weight: normal;
 	}
 }

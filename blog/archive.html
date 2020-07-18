@@ -1,126 +1,127 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<!-- 页面标签图标 -->
-		<link rel="icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<!-- CDN css文件 -->
-		<!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
-		<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/H-ui.reset.css" />
+<head>
+    <meta charset="utf-8"/>
+    <!-- 页面标签图标 -->
+    <link rel="icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <!-- CDN css文件 -->
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/H-ui.reset.css"/>
 
-		<!-- 项目css -->
-		<link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900" />
-		<link rel="stylesheet" type="text/css" href="css/archive.css" />
-		<link rel="stylesheet" type="text/css" href="css/anim.css" />
-		<title>归档 | 浮晓悠羡</title>
-	</head>
-	<body>
-		<div class="container-fluid" id="bloger">
-			<!-- 顶部导航 -->
-			<nav-menu></nav-menu>
-			<!-- 圆形悬浮导航 -->
-			<float-nav-menu></float-nav-menu>
+    <!-- 项目css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900"/>
+    <link rel="stylesheet" type="text/css" href="css/archive.css"/>
+    <link rel="stylesheet" type="text/css" href="css/anim.css"/>
+    <title>归档 | 浮晓悠羡</title>
+</head>
+<body>
+<div class="container-fluid" id="bloger">
+    <!-- 顶部导航 -->
+    <nav-menu></nav-menu>
+    <!-- 圆形悬浮导航 -->
+    <float-nav-menu></float-nav-menu>
 
-			<div class="screen-content">
-				<!-- 标题内容 -->
-				<div class="blog-title">
-					<div class="blog-name">
-						<span>归档</span>
-						<div class="title-line">
+    <div class="screen-content">
+        <!-- 标题内容 -->
+        <div class="blog-title">
+            <div class="blog-name">
+                <span>归档</span>
+                <div class="title-line">
 
-						</div>
-					</div>
-				</div>
-			</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="main-content">
-				<div class="blog-activity-container">
+    <div class="main-content">
+        <div class="blog-activity-container">
 
-					<div class="blog-activity col-lg-8 col-sm-11">
-						<div class="item-title-box">
-							<p class="title">博客动态</p>
-							<p class="line"></p>
-						</div>
+            <div class="blog-activity col-lg-8 col-sm-11">
+                <div class="item-title-box">
+                    <p class="title">博客动态</p>
+                    <p class="line"></p>
+                </div>
 
-						<div class="activity-items">
-							<div class="week-items" v-for="w in weeks">
-								<span :id="d.timestamp" class="day-item" v-for="d in w.daysOfWeek" :title="d.title" :style="{background: d.bgColor}" @mouseenter="showDayItemInfo(d.timestamp)"></span>
-							</div>
-						</div>
+                <div class="activity-items">
+                    <div class="week-items" v-for="w in weeks">
+                        <span :id="d.timestamp" class="day-item" v-for="d in w.daysOfWeek" :title="d.title"
+                              :style="{background: d.bgColor}" @mouseenter="showDayItemInfo(d.timestamp)"></span>
+                    </div>
+                </div>
 
-						<div class="activity-color-tip col-lg-12">
-							<span>Less</span>
-							<span class="color-tip-item" style="background-color: #ffffff;"></span>
-							<span class="color-tip-item" style="background-color: #c6e48b;"></span>
-							<span class="color-tip-item" style="background-color: #7bc96f;"></span>
-							<span class="color-tip-item" style="background-color: #239a3b;"></span>
-							<span class="color-tip-item" style="background-color: #196127;margin-right: 4px;"></span>
-							<span>More</span>
-						</div>
-					</div>
-				</div>
+                <div class="activity-color-tip col-lg-12">
+                    <span>Less</span>
+                    <span class="color-tip-item" style="background-color: #ffffff;"></span>
+                    <span class="color-tip-item" style="background-color: #c6e48b;"></span>
+                    <span class="color-tip-item" style="background-color: #7bc96f;"></span>
+                    <span class="color-tip-item" style="background-color: #239a3b;"></span>
+                    <span class="color-tip-item" style="background-color: #196127;margin-right: 4px;"></span>
+                    <span>More</span>
+                </div>
+            </div>
+        </div>
 
-				<!-- 归档列表 -->
-				<div class="update-content-container">
+        <!-- 归档列表 -->
+        <div class="update-content-container">
 
-					<div v-for="g in archiveGroups" class="update-month-item">
-						<!-- 月份标题 -->
-						<div class="archive-month-tag">
-							<span>{{g.dateGroup}}</span>
-						</div>
+            <div v-for="g in archiveGroups" class="update-month-item">
+                <!-- 月份标题 -->
+                <div class="archive-month-tag">
+                    <span>{{g.dateGroup}}</span>
+                </div>
 
-						<span class="tag-header-icon"></span>
+                <span class="tag-header-icon">{{g.dateMonth}}</span>
 
-						<!-- 每月更新列表 -->
-						<div class="update-day-list">
+                <!-- 每月更新列表 -->
+                <div class="update-day-list">
 
-							<div v-for="t in g.articleTitles" @click="gotoArticleDetail(t.articleId)" class="update-day-item">
-								<div class="item-left">
-									<span>{{t.publishTime}} {{t.articleTitle}}</span>
-								</div>
-								<div class="item-right">
-								</div>
-							</div>
-						</div>
+                    <div v-for="t in g.articleTitles" class="update-day-item">
+                        <div class="item-left"  @click="gotoArticleDetail(t.articleId)">
+                            <span class="title-date">&#10022&nbsp;{{t.publishTime}}</span>
+                            <span class="title-text">{{t.articleTitle}}</span>
+                        </div>
+                        <!--<div class="item-right">
+                        </div>-->
+                    </div>
+                </div>
 
-					</div>
+            </div>
 
 
+        </div>
 
-				</div>
+    </div>
 
-			</div>
+    <!-- 回顶部按钮 -->
+    <back-top></back-top>
 
-			<!-- 回顶部按钮 -->
-			<back-top></back-top>
+    <!--页脚  -->
+    <nav-footer></nav-footer>
+</div>
+<!-- CDN js依赖文件 -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-			<!--页脚  -->
-			<nav-footer></nav-footer>
-		</div>
-		<!-- CDN js依赖文件 -->
-		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
-		<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-		<!-- 项目js -->
-		<script src="js/gooey.min.js"></script>
-		<script src="layer/layer.js"></script>
+<!-- 项目js -->
+<script src="js/gooey.min.js"></script>
+<script src="layer/layer.js"></script>
 
 <!--		<script src="js/router.js"></script>-->
-		<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
 
 
-		<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/nav-menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
 
 <!--		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/archive.js?v=20200621140659"></script>
-		<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
-	</body>
+<script src="js/archive.js?v=20200621140659"></script>
+<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+</body>
 </html>

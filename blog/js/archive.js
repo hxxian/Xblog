@@ -13,7 +13,9 @@ $(function() {
 					if (this.archiveGroups) {
 						for (let i = 0; i < this.archiveGroups.length; i++) {
 							let date = this.archiveGroups[i].dateGroup.split('-')
-							this.archiveGroups[i].dateGroup = date[0] + "年" + date[1] + "月";
+							// this.archiveGroups[i].dateGroup = date[0] + "年" + date[1] + "月";
+							this.archiveGroups[i].dateGroup = date[0];
+							this.archiveGroups[i].dateMonth = appendZero(date[1]);
 							for (let j = 0; j < this.archiveGroups[i].articleTitles.length; j++) {
 								let dateArr = formatDate(this.archiveGroups[i].articleTitles[j].publishTime);
 								
