@@ -92,7 +92,7 @@ body {
 
 .type-item span {
 	color: #009ABB;
-	font-weight: 550;
+	font-weight: 500;
 	font-size: 1.5rem;
 	letter-spacing: 2px;
 	border-bottom: 1px dashed #666666;
@@ -419,13 +419,71 @@ body {
 
 	#write {
 		max-width: 100%;
+		font-size: 2.7rem;
+		line-height: 1.8;
+		font-style: normal;
 	}
+
+	#write h1 {
+		font-size: 4.3rem;
+	}
+
+	#write h2 {
+		font-size: 3.8rem;
+	}
+
 	#write p {
 		font-weight: 400;
 		font-style: normal;
 		font-size: 3.5rem;
-		line-height: 1.68;
+		line-height: 1.8;
 		margin: 1rem auto;
 		width: auto;
+	}
+
+	#write p code, #write li code {
+		font-size: 2.3rem;
+	}
+
+	.md-fences {
+		font-size: 2.5rem;
+	}
+
+	.type-box span {
+		font-size: 3.875rem;
+	}
+
+	.article-tag-box {
+		margin-top: 30px;
+		font-size: 2.2rem;
+	}
+
+	.article-date-box {
+		display: none;
+	}
+
+	.article-type-tag {
+		display: none;
+	}
+
+	.comment-container {
+		width: 100%;
+	}
+
+	.comment-inputs input {
+		height: 60px;
+	}
+
+	.comment-inputs .form-control {
+		font-size: 2.5rem;
+		letter-spacing: 5px;
+		line-height: 1.8;
+	}
+
+	.submit-box button {
+		width: 100px;
+		height: 60px;
+		letter-spacing: 3px;
+		font-size: 2.5rem;
 	}
 }
