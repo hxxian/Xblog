@@ -334,14 +334,16 @@ body {
 	right: 0px;
 }
 
+.comment-item .reply-btn-box:hover {
+	cursor: pointer;
+}
+
 .comment-item .reply-btn {
 	width: 44px;
 	height: 24px;
-	font-size: 8px;
-	padding: 2px 4px;
-	box-sizing: border-box;
-	background-color: #898c7b;
-	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 1rem;
+	color: #b4654d;
 }
 
 .comment-item .cancel-reply {
@@ -413,8 +415,13 @@ body {
 }
 
 @media screen and (max-width: 1080px) {
+	.float-article-container {
+		background: rgba(255,255,255,0);
+	}
+
 	.article-content {
-		padding: 0;
+		padding: 0 15px;
+		background: #FFFFFF;
 	}
 
 	#write {
@@ -425,11 +432,19 @@ body {
 	}
 
 	#write h1 {
-		font-size: 4.3rem;
+		font-size: 5.0rem;
 	}
 
 	#write h2 {
-		font-size: 3.8rem;
+		font-size: 4.0rem;
+	}
+
+	#write h3 {
+		font-size: 3.5rem;
+	}
+
+	#write h4 {
+		font-size: 3.2rem;
 	}
 
 	#write p {
@@ -450,12 +465,18 @@ body {
 	}
 
 	.type-box span {
-		font-size: 3.875rem;
+		font-size: 5.875rem;
+		color: #FFFFFF;
 	}
 
 	.article-tag-box {
-		margin-top: 30px;
-		font-size: 2.2rem;
+		margin-top: 50px;
+		font-size: 2.5rem;
+		letter-spacing: 2px;
+	}
+
+	.article-tag-box .tag-item {
+		color: #FFFFFF;
 	}
 
 	.article-date-box {
@@ -482,8 +503,44 @@ body {
 
 	.submit-box button {
 		width: 100px;
-		height: 60px;
+		height: 65px;
 		letter-spacing: 3px;
 		font-size: 2.5rem;
+	}
+
+	.comment-infos p.nickname {
+		font-size: 2.5rem;
+	}
+
+	.comment-infos p.time {
+		font-size: 2.2rem;
+	}
+
+	.comment-infos p.content {
+		font-size: 3.0rem;
+	}
+
+	.comment-container img {
+		width: 100px;
+		height: 100px;
+	}
+
+	.comment-item .reply-btn {
+		width: 100px;
+		height: 40px;
+		font-size: 2.5rem;
+	}
+
+	.submit-box button.cancel-reply {
+		width: 170px;
+		height: 65px;
+		font-size: 2.8rem;
+	}
+
+	.comment-item .link-line {
+		width: 3px;
+		position: absolute;
+		left: 48px;
+		top: 100px;
 	}
 }

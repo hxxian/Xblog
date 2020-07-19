@@ -123,13 +123,13 @@
 
                             </div>
 
-                            <div class="reply-btn-box" @click="showReplyBox(c.commentId)" v-show="mouseEnterCommentId == c.commentId || currSelectCommentId == c.commentId">
-                                <button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
+                            <div class="reply-btn-box" @click="showReplyBox(c.commentId)">
+                                <span class="item-reply-btn reply-btn">回复</span>
                             </div>
 
                             <div class="comment-infos">
                                 <p class="nickname">{{c.nickname}}</p>
-                                <p class="time">{{c.gmtCreate}}</p>
+                                <p class="time">{{c.gmtCreate}}&nbsp;&nbsp;&nbsp;&nbsp;#{{c.commentId}}</p>
                                 <p class="content">{{c.content}}</p>
                             </div>
                         </div>
@@ -145,15 +145,15 @@
                     <img src="img/me.jpg"/>
                     <div class="comment-inputs">
                         <div class="flex-row content-between">
-                            <input class="form-control" placeholder="*昵称"/>
-                            <input class="form-control" placeholder="*电子邮件"/>
-                            <input class="form-control" placeholder="个人站点"/>
+                            <input v-model="replyNickname" class="form-control" placeholder="*昵称"/>
+                            <input v-model="replyEmail" class="form-control" placeholder="*电子邮件"/>
+                            <input v-model="replyWebsite" class="form-control" placeholder="个人站点"/>
                         </div>
-                        <textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
+                        <textarea v-model="replyContent" class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
 
                         <div class="submit-box">
                             <button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
-                            <button class="btn btn-default">回复</button>
+                            <button class="btn btn-default" @click="replyComment()">回复</button>
                         </div>
                     </div>
                 </div>

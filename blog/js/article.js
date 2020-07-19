@@ -14,7 +14,6 @@ $(function() {
 			readCount: 0,
 			showType: false,
 			closeTypeTag: 0,
-			replyShow: false,
 			readyReply: false,
 			replyBtnText: "回复",
 			nickname: '',
@@ -25,9 +24,10 @@ $(function() {
 			commentSessions: [],
 			mouseEnterCommentId: 0,
 			currSelectCommentId: 0,
-			replyShow: false,
-			readyReply: false,
-			replyBtnText: "回复"
+			replyNickname:'',
+			replyEmail: '',
+			replyWebsite: '',
+			replyContent:''
 		},
 		methods: {
 			loadArticle: function() {
@@ -66,28 +66,15 @@ $(function() {
 				this.mouseEnterCommentId = 0;
 			},
 			showReplyBox: function(commentId) {
-				if (this.readyReply) {
-					this.currSelectCommentId = 0;
-					this.hideReplyBox();
-					return;
-				}
 				this.currSelectCommentId = commentId;
-				this.readyReply = true;
-				this.replyBtnText = "取消回复";
 				$(".bottom-send-box").removeClass("top-leave");
 				$(".bottom-send-box").addClass("bottom-enter");
-				
-				$(".item-reply-btn").removeClass("reply-btn");
-				$(".item-reply-btn").addClass("cancel-reply");
 			},
 			hideReplyBox: function() {
-				this.readyReply = false;
-				this.replyBtnText = "回复";
+				this.currSelectCommentId = 0;
+
 				$(".bottom-send-box").removeClass("bottom-enter");
 				$(".bottom-send-box").addClass("top-leave");
-				
-				$(".item-reply-btn").removeClass("cancel-reply");
-				$(".item-reply-btn").addClass("reply-btn");
 			},
 			submitComment: function () {
 				let data = {
@@ -97,6 +84,23 @@ $(function() {
 					email: this.email,
 					website: this.website,
 					content: this.commentContent
+				}
+
+				addComment(data).then(res => {
+					// 发表评论成功
+					if (res) {
+						console.log(res)
+					}
+				})
+			},
+			replyComment: function() {
+				let data = {
+					articleId: articleId,
+					replyCommentId: this.currSelectCommentId,
+					nickname: this.replyNickname,
+					email: this.replyEmail,
+					website: this.replyWebsite,
+					content: this.replyContent
 				}
 
 				addComment(data).then(res => {
