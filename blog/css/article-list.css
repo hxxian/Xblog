@@ -164,3 +164,44 @@ span.read-count {
 	position: absolute;
 	bottom: 0;
 }
+
+@media screen and (max-width: 1080px) {
+	.screen-content {
+		height: 1000px;
+	}
+
+	.float-article-container {
+		height: 1000px;
+	}
+
+	.type-select-icon img {
+		width: 60px;
+		height: 60px;
+	}
+
+	.type-list-box {
+		width: 350px;
+	}
+
+	.type-item span {
+		font-size: 3rem;
+	}
+
+	.type-box {
+		margin-top: 100px;
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+
+	.type-box span {
+		font-size: 4rem;
+	}
+
+	.article-item span {
+		font-size: 3rem;
+	}
+
+	.pagination {
+		font-size: 2.5rem;
+	}
+}

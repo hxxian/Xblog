@@ -1,108 +1,126 @@
 @keyframes fade-in {
-	0% {
-		opacity: 0;
-	}
+    0% {
+        opacity: 0;
+    }
 
-	100% {
-		opacity: 0.8;
-	}
+    100% {
+        opacity: 0.8;
+    }
 }
 
 @keyframes fade-out {
-	0% {
-		opacity: 1;
-	}
+    0% {
+        opacity: 1;
+    }
 
-	100% {
-		opacity: 0;
-	}
+    100% {
+        opacity: 0;
+    }
 }
 
 @keyframes bottom-in {
-	0% {
-		height: 0px;
-		opacity: 0;
-	}
+    0% {
+        height: 0px;
+        opacity: 0;
+    }
 
-	100% {
-		height: 400px;
-		opacity: 1;
-	}
+    100% {
+        height: 400px;
+        opacity: 1;
+    }
 }
 
 @keyframes top-out {
-	0% {
-		height: 300px;
-		opacity: 1;
-	}
+    0% {
+        height: 300px;
+        opacity: 1;
+    }
 
-	100% {
-		height: 0px;
-		opacity: 0;
-	}
+    100% {
+        height: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes left-in {
+    0% {
+	    transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes right-out {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        ransform: translateX(-100%);
+    }
 }
 
 @keyframes scale-in {
-	0% {
-		width: 0%;
-		transform: scaleX(0);
-	}
+    0% {
+        width: 0%;
+        transform: scaleX(0);
+    }
 
-	100% {
-		width: 100%;
-		transform: scaleX(1);
-	}
+    100% {
+        width: 100%;
+        transform: scaleX(1);
+    }
 }
 
 @keyframes scaleLT-in {
-	0% {
-		transform: scale(0);
-		transform-origin: left bottom;
-	}
+    0% {
+        transform: scale(0);
+        transform-origin: left bottom;
+    }
 
-	90% {
-		transform: scale(1.1);
-		transform-origin: left bottom;
-	}
+    90% {
+        transform: scale(1.1);
+        transform-origin: left bottom;
+    }
 
-	100% {
-		transform: scale(1);
-		transform-origin: left bottom;
-	}
+    100% {
+        transform: scale(1);
+        transform-origin: left bottom;
+    }
 }
 
 @keyframes scaleLT-out {
-	0% {
-		transform: scale(1);
-		transform-origin: left bottom;
-	}
+    0% {
+        transform: scale(1);
+        transform-origin: left bottom;
+    }
 
-	10% {
-		transform: scale(1.2);
-		transform-origin: left bottom;
-	}
+    10% {
+        transform: scale(1.2);
+        transform-origin: left bottom;
+    }
 
-	100% {
-		transform: scale(0);
-		transform-origin: left bottom;
-	}
+    100% {
+        transform: scale(0);
+        transform-origin: left bottom;
+    }
 }
 
 @keyframes scaleCenter-in {
-	0% {
-		transform: scale(1);
-	}
+    0% {
+        transform: scale(1);
+    }
 
-	100% {
-		transform: scale(1.1);
-	}
+    100% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes rotate {
-	0% {
-		transform: rotate(0);
-	}
-	100% {
-		transform: rotate(360);
-	}
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360);
+    }
 }

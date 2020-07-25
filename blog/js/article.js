@@ -90,6 +90,7 @@ $(function() {
 					// 发表评论成功
 					if (res) {
 						console.log(res)
+						this.loadComments();
 					}
 				})
 			},
@@ -106,7 +107,10 @@ $(function() {
 				addComment(data).then(res => {
 					// 发表评论成功
 					if (res) {
-						console.log(res)
+						// TODO 重新加载回复列表
+						$(".bottom-send-box").removeClass("bottom-enter");
+						$(".bottom-send-box").addClass("top-leave");
+						this.loadComments();
 					}
 				})
 			},

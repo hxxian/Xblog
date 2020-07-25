@@ -41,6 +41,17 @@
                 </div>
             </div>
         </div>
+
+        <!-- 文章标题 -->
+        <div class="small-screen-title-container">
+            <p>{{articleTitle}}</p>
+            <div class="line"></div>
+            <div class="info">
+                <img src="img/me.jpg">
+                <span>{{readCount}}&nbsp;次访问</span>
+                <span style="border-left: 5px solid #ffffff;margin-left: 30px;padding-left: 30px">{{publishDate}}</span>
+            </div>
+        </div>
     </div>
 
     <div class="main-content">
@@ -118,7 +129,7 @@
                     </div>
                     <div class="comments-session" v-for="s in commentSessions">
                         <div class="comment-item" v-for="(c, idx) in s.comments" @mouseenter="itemMouseEnter(c.commentId)" @mouseleave="itemMouseLeave(0)">
-                            <img src="img/me.jpg" />
+                            <img :src="c.avatarUrl ? c.avatarUrl : 'img/me.jpg'" />
                             <div class="link-line" v-if="idx < s.comments.length - 1">
 
                             </div>

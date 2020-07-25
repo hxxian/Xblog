@@ -1,7 +1,55 @@
 $(function ($) {
     Vue.component('float-nav-menu', {
         data: function () {
-            return {}
+            return {
+                showSlideMenu: false,
+                menus: [
+                    {
+                        menuName: "首页",
+                        linkPage: "index.html",
+                        icon: "glyphicon glyphicon-home"
+                    },
+                    {
+                        menuName: "文章",
+                        linkPage: "article-list.html",
+                        icon: "glyphicon glyphicon-list-alt"
+                    },
+                    {
+                        menuName: "归档",
+                        linkPage: "archive.html",
+                        icon: "glyphicon glyphicon-tasks"
+                    },
+                    {
+                        menuName: "关于我",
+                        linkPage: "about-me.html",
+                        icon: "glyphicon glyphicon-user"
+                    }
+                ],
+            }
+        },
+        methods: {
+            gotoPage: function(idx) {
+                if (this.menus[idx] && this.menus[idx].linkPage) {
+                    window.location.href = "./" + this.menus[idx].linkPage
+                }
+            },
+            showMenu: function () {
+                this.showSlideMenu = !this.showSlideMenu;
+                if (this.showSlideMenu) {
+                    $(".sidebar-menu-container").removeClass("slide-menu-hide");
+                    $(".sidebar-menu-container").addClass("slide-menu-show");
+
+                    // $(".sidebar-menu-container").removeClass("hide");
+                    // $(".sidebar-menu-container").addClass("show");
+                } else {
+                    $(".sidebar-menu-container").removeClass("slide-menu-show");
+                    $(".sidebar-menu-container").addClass("slide-menu-hide");
+
+                    // $(".sidebar-menu-container").removeClass("show");
+                    // $(".sidebar-menu-container").addClass("hide");
+                }
+
+            }
         },
         template: floatMenu
     })
@@ -9,17 +57,19 @@ $(function ($) {
 })
 
 var floatMenu =
-    '<div class="radius-menu">' +
-    '    <nav id="gooey-v">' +
-    '       <input type="checkbox" class="menu-open" name="menu-open4" id="menu-open4"/>' +
-    '       <label class="open-button" for="menu-open4">' +
-    '               <span class="burger burger-1"></span>' +
-    '               <span class="burger burger-2"></span>' +
-    '               <span class="burger burger-3"></span>' +
-    '           </label>' +
-    '           <a href="index.html" title="首页" class="gooey-menu-item"><span class="glyphicon glyphicon-home"></span> </a>' +
-    '           <a href="article-list.html" title="文章" class="gooey-menu-item"><span class="glyphicon glyphicon-list-alt"></span> </a>' +
-    '           <a href="archive.html" title="归档" class="gooey-menu-item"><span class="glyphicon glyphicon-tasks"></span> </a>' +
-    '           <a href="about-me.html" title="关于我" class="gooey-menu-item"><span class="glyphicon glyphicon-user"></span> </a>' +
-    '   </nav>' +
-    '</div>';
+    `<div class="footer-menu">
+        <div class="radius-menu">
+            <span @click="showMenu()" class="glyphicon glyphicon-menu-hamburger"></span>
+            <span class="side-title">浮晓悠羡</span>
+        </div>
+        <div class="sidebar-menu-container">
+    
+            <div class="sidebar-menu">
+                <div v-for="(m, idx) in menus" class="sidemenu-item" @click="gotoPage(idx)">
+                    <span :class="m.icon"></span>
+                    <span class="menu-name">{{m.menuName}}</span>
+                </div>
+            </div>
+            <div class="slide-menu-shadow"></div>
+        </div>
+    </div>`;
