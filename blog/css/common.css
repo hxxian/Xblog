@@ -224,7 +224,7 @@ h2 {
 
 .nav-contact-box {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 220px;
     justify-content: space-around;
@@ -232,17 +232,25 @@ h2 {
 }
 
 .nav-contact-item {
-    width: 36px;
-    height: 36px;
-    background-color: rgba(0, 0, 0, 0.6);
+    width: 100px;
+    /*height: 36px;*/
+    /*background-color: rgba(0, 0, 0, 0.6);*/
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: start;
     align-items: center;
-    border-radius: 50%;
+    margin-top: 16px;
+}
+
+.nav-contact-item span {
+    font-family: JosefinSans;
+    font-size: 1.3rem;
+    color: #555555;
+    margin-left: 10px;
 }
 
 .nav-contact-item:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    /*background-color: rgba(0, 0, 0, 0.8);*/
     cursor: pointer;
 }
 

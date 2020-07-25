@@ -45,25 +45,28 @@ $(function() {
 var footer =
 	'<div class="nav-footer"> ' +
 	'	<div class="link-container"> ' +
-	'		<div class="qrcode"> ' +
-	'			<img src="img/qrcode.jpg"> ' +
-	'			<span>关注微信公众号</span> ' +
-	'		</div> ' +
+	// '		<div class="qrcode"> ' +
+	// '			<img src="img/qrcode.jpg"> ' +
+	// '			<span>关注微信公众号</span> ' +
+	// '		</div> ' +
 	'		<div class="nav-contact-box"> ' +
 	'			<div @click="gotoContact(1)" title="跳转博主GitHub主页" class="nav-contact-item"> ' +
 	'				<img src="img/github.png"> ' +
+	'				<span>Github</span> ' +
 	'			</div> ' +
 	'			<div @click="gotoContact(2)" title="跳转博主CSDN主页" class="nav-contact-item"> ' +
 	'				<img src="img/csdn.png"> ' +
+	'				<span>CSDN</span> ' +
 	'			</div> ' +
-	'			<div @click="gotoContact(3)" class="nav-contact-item"> ' +
-	'				<img src="img/wechat.png"> ' +
-	'			</div> ' +
-	'			<div @click="gotoContact(4)" class="nav-contact-item"> ' +
-	'				<img src="img/QQ.png"> ' +
-	'			</div> ' +
+	// '			<div @click="gotoContact(3)" class="nav-contact-item"> ' +
+	// '				<img src="img/wechat.png"> ' +
+	// '			</div> ' +
+	// '			<div @click="gotoContact(4)" class="nav-contact-item"> ' +
+	// '				<img src="img/QQ.png"> ' +
+	// '			</div> ' +
 	'			<div @click="gotoContact(5)" title="Email" id="me-email" class="nav-contact-item"> ' +
 	'				<img src="img/email.png"> ' +
+	'				<span>Email</span> ' +
 	'			</div> ' +
 	'		</div> ' +
 	'	</div> ' +
