@@ -309,7 +309,7 @@ span.tag-content {
 }
 
 .me-qrcode img {
-    width: 350px;
+    width: 100%;
 }
 
 /* 最新评论 */
