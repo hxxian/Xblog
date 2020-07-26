@@ -77,15 +77,15 @@ body {
 
 .update-day-list {
 	margin-top: 70px;
-	margin-left: 30px;
+	margin-left: 45px;
 }
 
 .update-day-item {
 	width: 100%;
-	height: 42px;
+	min-height: 45px;
 	display: flex;
 	flex-direction: row;
-	margin-top: 20px;
+	margin-top: 5px;
 }
 
 
@@ -135,13 +135,15 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	margin-top: -500px;
+	overflow: hidden;
+	box-sizing: border-box;
 }
 
 /* 博客活动 */
 .blog-activity {
-	/*width: 80%;*/
+	/*width: 95%;*/
 	height: 320px;
-	background-color: rgba(0,0,0,0.2);
+	background-color: rgba(255,255,255,0.2);
 	border-radius: 10px;
 	padding-top: 20px;
 	box-sizing: border-box;
@@ -206,6 +208,7 @@ body {
 	justify-content: flex-end;
 	padding-right: 30px;
 	color: #FFFFFF;
+	align-items: center;
 }
 
 .color-tip-item {
@@ -217,13 +220,42 @@ body {
 
 /******* 移动设备下（包括ipad）个别样式的定义 *******/
 @media screen and (max-width: 1080px) {
+	.screen-content {
+		height: 1000px;
+	}
+
+	.blog-activity .item-title-box .title {
+		font-size: 3.5rem;
+	}
+
+	.blog-activity .item-title-box .line {
+		width: 200px;
+	}
+
+	.blog-activity {
+		width: 95%;
+	}
+
+	.blog-activity-container {
+		margin-top: -600px;
+	}
+
+	.update-content-container {
+		margin-top: 250px;
+	}
+
+	.activity-color-tip {
+		font-size: 2rem;
+		padding-right: 0;
+	}
+
 	.update-month-item {
 		min-width: 100%;
 	}
 
 	.week-items .day-item {
-		width: 1.0rem;
-		height: 1.0rem;
+		width: 1.1rem;
+		height: 1.1rem;
 		margin-top: 6px;
 		background-color: #ffffff;
 		box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
@@ -237,28 +269,28 @@ body {
 	}
 
 	.archive-month-tag span {
-		font-size: 4.5rem;
+		font-size: 5.5rem;
 	}
 
 	.tag-header-icon {
-		width: 40px;
-		height: 25px;
+		width: 50px;
+		height: 30px;
 		position: absolute;
-		top: 100px;
-		left: -18px;
-		font-size: 1.5rem;
+		top: 120px;
+		left: -20px;
+		font-size: 2rem;
 	}
 
 	.update-day-list {
-		margin-top: 86px;
+		margin-top: 108px;
 	}
 
 	.title-date {
-		font-size: 2.0rem;
+		font-size: 2.5rem;
 	}
 
 	.title-text {
-		font-size: 2.3rem;
+		font-size: 3rem;
 		font-weight: normal;
 	}
 }

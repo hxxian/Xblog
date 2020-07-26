@@ -22,6 +22,38 @@ body {
 	/* left: 150px; */
 }
 
+.header-motto-box {
+	position: absolute;
+	width: 100%;
+	top: 150px;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.head-motto {
+	/*background: rgba(255,255,255,0.6);*/
+	border-radius: 10px;
+	min-height: 200px;
+	position: relative;
+	color: #FFFFFF;
+}
+
+.head-motto p {
+	font-family: myfont2;
+	font-size: 2.5rem;
+	padding-top: 30px;
+	padding-left: 30px;
+}
+
+.head-motto span {
+	font-family: myfont2;
+	position: absolute;
+	right: 5rem;
+	bottom: 2rem;
+	font-size: 1.5rem;
+}
+
 /* 主体内容 */
 .main-content {
 	display: flex;
@@ -36,280 +68,60 @@ body {
 	/*width: 1100px;*/
 	border-radius: 8px;
 	background-color: rgba(255, 255, 255, 0.9);
-	margin-top: -300px;
+	margin-top: -100px;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	padding-bottom: 30px;
+	align-items: flex-start;
+	padding: 30px 50px;
 }
 
-.me-title {
-	margin-top: 50px;
-	padding-bottom: 20px;
-	border-bottom: 2px solid #CCCCCC;
-	width: 70%;
-}
-
-.me-title span {
-	font-size: 3rem;
-	color: #666666;
-	letter-spacing: 6px;
-}
-
-.me-motto {
-	margin-top: 20px;
-	line-height: 32px;
-	text-align: center;
-	font-size: 1.6rem;
-	color: #009ABB;
-	letter-spacing: 2px;
-}
-
-.me-introduce {
-	margin-top: 50px;
-	width: 70%;
-	font-size: 1.5rem;
-	line-height: 27px;
-	letter-spacing: 1px;
-	color: #999;
-}
-
-.me-introduce img {
-	width: 100%;
-	height: 200px;
-	opacity: 0.5;
-	overflow: hidden;
-}
-
-.me-introduce .introduce-title {
-	font-size: 2rem;
-	border-bottom: 1px dashed #CCCCCC;
-	color: #666666;
-	padding-bottom: 6px;
-	margin-bottom: 20px;
-}
-
-.introduce-content {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-}
-
-.introduce-content span {
-	display: inline-block;
-}
-
-.me-skill {
-	width: 70%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin-top: 30px;
-}
-
-.me-skill-tile {
-	font-size: 2rem;
-	border-bottom: 1px dashed #CCCCCC;
-	color: #666666;
-	padding-bottom: 6px;
-	margin-bottom: 20px;
-	margin-top: 50px;
-}
-
-.me-skill img {
-	width: 100px;
-	height: 100px;
-	border-radius: 50%;
-	margin-top: 30px;
-}
-
-.skill-info {
-	color: #666666;
-	width: 75%;
-	letter-spacing: 2px;
-	line-height: 26px;
-	font-size: 1.3rem;
-	margin-top: 26px;
-	display: flex;
-	justify-content: center;
-}
-
-.skill-one, .skill-two, .skill-three, .skill-four {
-	width: 45%;
-	height: 300px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-@media screen and (max-width: 1080px){
-	.skill-one, .skill-two, .skill-three, .skill-four {
-		width: 49%;
-		height: 300px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
-.skill-one {
-	border-right: 2px solid #CCCCCC;
-	border-bottom: 2px solid #CCCCCC;
-}
-
-.skill-two {
-	border-bottom: 2px solid #CCCCCC;
-}
-
-.skill-three {
-	border-right: 2px solid #CCCCCC;
-}
-
-/* 评论部分 */
-.comment-container {
-	width: 850px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.comment-container img {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-}
-
-.comment-send-box {
-	display: flex;
-	flex-direction: row;
-}
-
-.comment-inputs {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	margin-left: 15px;
-}
-
-.comment-inputs input {
-	/* margin-left: 15px; */
-	width: 32%;
-}
-
-.comment-inputs textarea {
-	margin-top: 10px;
-}
-
-.submit-box {
-	width: 100%;
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 20px;
-}
-
-.submit-box button {
-	width: 70px;
-	height: 40px;
-	background-color: #898c7b;
-	font-size: 14px;
-	color: #FFFFFF;
-}
-
-.submit-box button.cancel-reply {
-	width: 90px;
-	height: 40px;
-	background-color: #c1804d;
-	font-size: 14px;
-	color: #FFFFFF;
-	margin-right: 15px;
-}
-
-/* 评论列表 */
-.comment-list-box {
-	margin-top: 50px;
-}
-
-.comments-session {
-	border-bottom: 3px solid #f5f8fa;
-	width: 100%;
-	padding-bottom: 40px;
-}
-
-.comment-item {
-	width: 850px;
-	display: flex;
-	flex-direction: row;
+.content-item {
 	margin-top: 40px;
-	position: relative;
 }
 
-.comment-item .link-line {
-	width: 2px;
-	height: 68px;
-	position: absolute;
-	left: 24px;
-	top: 52px;
-	background-color: #898c7b;
+.content-item .title {
+	font-size: 2.1rem;
+	margin-bottom: 10px;
+
+	/*color: #b4654d;*/
 }
 
-.comment-item .reply-btn-box {
-	position: absolute;
-	right: 0px;
-}
-
-.comment-item .reply-btn {
-	width: 44px;
-	height: 24px;
-	font-size: 8px;
-	padding: 2px 4px;
-	box-sizing: border-box;
-	background-color: #898c7b;
-	color: #FFFFFF;
-}
-
-.comment-item .cancel-reply {
-	width: 74px;
-	height: 24px;
-	font-size: 8px;
-	padding: 2px 4px;
-	box-sizing: border-box;
-	background-color: #898c7b;
-	color: #FFFFFF;
-}
-
-.comment-infos {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	margin-left: 15px;
-}
-
-.comment-infos p.nickname {
-	font-weight: bold;
-	font-size: 16px;
+.content-item .desc p {
+	font-size: 1.3rem;
+	line-height: 3rem;
+	letter-spacing: 2px;
 	color: #666666;
 }
 
-.comment-infos p.time {
-	color: #999999;
-	margin-top: 2px;
-}
+@media screen and (max-width: 1080px) {
+	.screen-content {
+		height: 1000px;
+	}
 
-.comment-infos p.content {
-	margin-top: 16px;
-}
+	.header-motto-box {
+		top: 300px;
+	}
 
-/* 底部弹出评论框 */
-.bottom-send-box {
-	width: 100%;
-	height: 0px;
-	position: fixed;
-	bottom: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	background-color: #fffae8;
+	.head-motto p {
+		font-size: 4.5rem;
+	}
+
+	.head-motto span {
+		font-size: 3rem;
+		bottom: -50px;
+		right: 0;
+	}
+
+	.content-item {
+		margin-top: 60px;
+	}
+	.content-item .title {
+		font-size: 4.5rem;
+	}
+
+	.content-item .desc p {
+		font-size: 2.8rem;
+		line-height: 4.5rem;
+		letter-spacing: 3px;
+	}
 }

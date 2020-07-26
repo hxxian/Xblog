@@ -37,184 +37,66 @@
 				</div>
 			</div>
 
+			<div class="header-motto-box">
+				<div class="head-motto col-md-4 col-sm-8">
+					<p id="motto" v-html="diaryContent"></p>
+					<span>——{{diaryDate}}</span>
+				</div>
+			</div>
+
 			<div class="main-content">
 
-				<div class="about-content col-lg-7 col-sm-10">
+				<div class="about-content col-lg-7 col-sm-11">
 
-					<div class="me-title flex-row content-center">
-						<span>&#9672&nbsp&nbsp</span>
-						<span>浮晓悠羡的空间</span>
-						<span>&nbsp&nbsp&#9672</span>
-					</div>
-
-					<div class="me-motto">
-						<p>
-							<span>绿衣捧砚催题卷，红袖添香伴读书</span>
-							<span>&nbsp;&#10022&nbsp;</span>
-							<span>漫漫长夜，寻找快乐的孤独</span>
-						</p>
-						<p>在极致的时间里，追求极致的卓越，做一名极致的极客</p>
-					</div>
-
-					<div class="me-introduce flex-column content-center">
-						<p class="introduce-title">个人简介</p>
-						<div class="introduce-content">
-							<span>上班族、程序员一枚，写博客，纯属个人兴趣爱好</span>
-							<span>为省思，为分享，为成长</span>
-							<span>在那灯红酒绿、车流人往的都市里，只为做一名极客，寻求代码的专属惬意与自在</span>
-							<span>道阻且长，不断超越</span>
+					<div class="content-item">
+						<div class="title">1.Self Introduction</div>
+						<div class="desc">
+							<p><span>&#10022&nbsp;</span>理工男，程序员一枚，坐标广州。</p>
+							<p><span>&#10022&nbsp;</span>现就职于一家专注于做图像音视频处理应用的公司，从事Android开发、后端服务开发。</p>
 						</div>
 					</div>
 
-					<div class="me-skill-tile flex-row content-center">
-						<span>专业技能</span>
+					<div class="content-item">
+						<div class="title">2.Skills Stack</div>
+						<div class="desc">
+							<p><span>&#10022&nbsp;</span>Java后端开发，技术栈主要包含：Spring、MySQL、Redis、微服务、网络编程Netty。</p>
+							<p><span>&#10022&nbsp;</span>Android应用开发，专注于图像处理、音视频处理领域，技术栈主要包含：Android Framework、OpenGL、GLSL。</p>
+							<p><span>&#10022&nbsp;</span>Web前端，技术栈包含：JavaScript、HTML、CSS、Jquery、Vue等，非专职，仅应付个人博客网站开发。</p>
+						</div>
 					</div>
-					<div class="me-skill">
 
-						<div class="skill-one">
-							<img src="img/java-logo.jpg">
-							<div class="skill-info">
-								<p>熟悉掌握java后端开发技术，技术栈主要包含：Spring、MySQL、Redis、微服务、网络编程Netty。</p>
-							</div>
-						</div>
-						<div class="skill-two">
-							<img src="img/android-logo.jpg" title="asdsadf">
-							<div class="skill-info">
-								<p>熟悉掌握Android开发技术、OpenGL，主要从事图像、音视频开发。</p>
-							</div>
-						</div>
-						<div class="skill-three">
-							<img src="img/h5-logo.jpg">
-							<div class="skill-info">
-								<p>熟悉掌握Web前端开发，熟悉JavaScript、HTML、CSS、Vue等，能做仿站开发。</p>
-							</div>
-						</div>
-						<div class="skill-four">
-							<img src="img/mini-logo.jpg">
-							<div class="skill-info">
-								<p>熟悉微信小程序原生语言编码开发。</p>
-							</div>
+					<div class="content-item">
+						<div class="title">3.Contact Information</div>
+						<div class="desc">
+							<p><span>&#10022&nbsp;</span>Email: 363756222@qq.com</p>
+							<p><span>&#10022&nbsp;</span>QQ: 363756222</p>
+							<p><span>&#10022&nbsp;</span>WeChat: 舞零 (wx_wuling)</p>
 						</div>
 					</div>
+
+					<div class="content-item">
+						<div class="title">4.Blog Content</div>
+						<div class="desc">
+							<p><span>&#10022&nbsp;</span>Java后端领域相关技术文章</p>
+							<p><span>&#10022&nbsp;</span>Android领域相关技术文章</p>
+							<p><span>&#10022&nbsp;</span>图像音视频领域相关技术文章</p>
+							<p><span>&#10022&nbsp;</span>OpenGL相关技术文章</p>
+							<p><span>&#10022&nbsp;</span>个人心得分享与工作记录</p>
+						</div>
+					</div>
+
+					<div class="content-item">
+						<div class="title">5.Motto</div>
+						<div class="desc">
+							<p><span>&#10022&nbsp;</span>写博客的初衷：分享与成长。</p>
+							<p><span>&#10022&nbsp;</span>创作与学习是互补的，因为学习而想创作，因为创作而想学习。</p>
+							<p><span>&#10022&nbsp;</span>人生漫漫，学无止境。</p>
+							<p><span>&#10022&nbsp;</span>开挂的人生，都离不开自律。</p>
+						</div>
+					</div>
+
 				</div>
 
-				<!-- <div class="partition-line"> -->
-
-				<!-- </div> -->
-
-				<!-- 评论区 -->
-				<!-- <div class="comment-container"> -->
-					<!-- 填写评论信息 -->
-					<!-- <div class="comment-send-box col-lg-12">
-						<img src="img/me.jpg" />
-						<div class="comment-inputs">
-							<div class="flex-row content-between">
-								<input class="form-control" placeholder="*昵称" />
-								<input class="form-control" placeholder="*电子邮件" />
-								<input class="form-control" placeholder="个人站点" />
-							</div>
-							<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
-							<div class="submit-box">
-								<button class="btn btn-default">提交</button>
-							</div>
-						</div>
-					</div> -->
-
-					<!-- 评论 -->
-					<!-- <div class="comment-list-box col-lg-12" id="comment">
-						<div class="comments-session">
-							<div class="comment-item" @mouseenter="itemMouseEnter(1)" @mouseleave="itemMouseLeave(1)">
-								<img src="img/me.jpg" />
-								<div class="link-line">
-
-								</div>
-								<div class="reply-btn-box" @click="showReplyBox()" v-show="replyShow || readyReply">
-									<button class="btn item-reply-btn reply-btn">{{replyBtnText}}</button>
-								</div>
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-								</div>
-							</div>
-							<div class="comment-item">
-								<img src="img/me.jpg" />
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">丢！技术栈多有个屁用，理解原理，理解源码才是最厉害的！</p>
-								</div>
-							</div>
-						</div> -->
-
-						<!-- 会话组 -->
-						<!-- <div class="comments-session">
-							<div class="comment-item">
-								<img src="img/me.jpg" />
-								<div class="link-line">
-
-								</div>
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-								</div>
-							</div>
-							<div class="comment-item">
-								<img src="img/me.jpg" />
-								<div class="link-line">
-
-								</div>
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-								</div>
-							</div>
-							<div class="comment-item">
-								<img src="img/me.jpg" />
-								<div class="link-line">
-
-								</div>
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">你的技术栈增加了好多，尤其是开发框架那里，我一定要赶上你，超过你 ，哼</p>
-								</div>
-							</div>
-							<div class="comment-item">
-								<img src="img/me.jpg" />
-								<div class="comment-infos">
-									<p class="nickname">舞零</p>
-									<p class="time">2020/04/22 22:10</p>
-									<p class="content">丢！技术栈多有个屁用，理解原理，理解源码才是最厉害的！</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
-				<!-- 底部弹出评论 -->
-				<!-- <div class="bottom-send-box">
-					<div class="comment-container">
-						<div class="comment-send-box col-lg-12">
-							<img src="img/me.jpg" />
-							<div class="comment-inputs">
-								<div class="flex-row content-between">
-									<input class="form-control" placeholder="*昵称" />
-									<input class="form-control" placeholder="*电子邮件" />
-									<input class="form-control" placeholder="个人站点" />
-								</div>
-								<textarea class="form-control col-lg-12" rows="4" placeholder="*撰写评论..."></textarea>
-
-								<div class="submit-box">
-									<button class="btn btn-default cancel-reply" @click="hideReplyBox()">取消回复</button>
-									<button class="btn btn-default">回复</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 			</div>
 			
 			<!-- 回顶部按钮 -->
@@ -239,7 +121,8 @@
 		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
 		<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
 
-		<script src="js/comment.js"></script>
+<!--		<script src="js/comment.js"></script>-->
 		<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+		<script src="js/about-me.js"></script>
 	</body>
 </html>

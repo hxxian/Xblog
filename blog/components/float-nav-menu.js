@@ -38,15 +38,9 @@ $(function ($) {
                 if (this.showSlideMenu) {
                     $(".sidebar-menu-container").removeClass("slide-menu-hide");
                     $(".sidebar-menu-container").addClass("slide-menu-show");
-
-                    // $(".sidebar-menu-container").removeClass("hide");
-                    // $(".sidebar-menu-container").addClass("show");
                 } else {
                     $(".sidebar-menu-container").removeClass("slide-menu-show");
                     $(".sidebar-menu-container").addClass("slide-menu-hide");
-
-                    // $(".sidebar-menu-container").removeClass("show");
-                    // $(".sidebar-menu-container").addClass("hide");
                 }
 
             }
@@ -59,7 +53,8 @@ $(function ($) {
 var floatMenu =
     `<div class="footer-menu">
         <div class="radius-menu">
-            <span @click="showMenu()" class="glyphicon glyphicon-menu-hamburger"></span>
+            <img @click="showMenu()" src="img/menuon.png" v-if="!showSlideMenu">
+            <img @click="showMenu()" src="img/menuoff.png" v-else>
             <span class="side-title">浮晓悠羡</span>
         </div>
         <div class="sidebar-menu-container">

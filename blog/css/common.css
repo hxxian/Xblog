@@ -318,7 +318,7 @@ h2 {
 
 
 .nav-footer .record-info {
-    border-top: 1px dashed #666666;
+    border-top: 1px dashed #999999;
     width: 100%;
     color: #999;
     font-size: 1.3rem;
@@ -487,6 +487,12 @@ h2 {
     align-items: center;
 }
 
+.radius-menu img {
+    width: 60px;
+    height: 60px;
+    margin-left: 30px;
+}
+
 .radius-menu span {
     font-size: 5rem;
     margin-left: 30px;
@@ -573,5 +579,8 @@ body {
 @media screen and (max-width: 1080px) {
     .footer-menu {
         display: flex;
+    }
+    .layui-layer layui-layer-tips {
+        font-size: 2rem;
     }
 }

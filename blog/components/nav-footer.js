@@ -31,8 +31,10 @@ $(function () {
                         anim: 0 //0-6的选择，指定弹出图片动画类型，默认随机
                     });
                 } else if (type == 5) {
-                    layer.tips('363756222@qq.com', '#me-email', {
-                        tips: [1, '#0FA6D8']
+                    layer.tips(`<span style="color:white;font-size: 2rem;height: 50px;line-height: 40px;">363756222@qq.com</span>`, '#me-email', {
+                        tips: [1, '#0FA6D8'],
+                        time: 8000,
+                        area: ['250px', '50px']
                     });
                 }
             }

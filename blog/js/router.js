@@ -1,6 +1,14 @@
-var DEBUG = true;
+var DEBUG = false;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "https://www.hxxian.cn:448/xbloger/";
 
+/**
+ * 获取最新说说
+ *
+ * @returns {Promise<unknown>}
+ */
+function getLatestDiary() {
+	return getJson('home/diary', {});
+}
 
 /**
  * 加载文章评论
