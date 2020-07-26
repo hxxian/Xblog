@@ -46,7 +46,6 @@ function addMeta(name, content) {//手动添加mate标签
 
 function navTopHideAndScrollShow() {
     $(window).scroll(function () {
-        console.log(window.innerWidth)
         let scrollPos = $(window).scrollTop();
         if (scrollPos > 0) {
             $(".nav-top").removeClass("none");

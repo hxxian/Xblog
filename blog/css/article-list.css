@@ -181,6 +181,7 @@ span.read-count {
 
 	.type-list-box {
 		width: 350px;
+		top: -240px;
 	}
 
 	.type-item span {

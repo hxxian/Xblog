@@ -226,6 +226,7 @@ body {
     font-size: 2.2rem;
     font-weight: bold;
     letter-spacing: 2px;
+    padding: 0 30px;
 }
 
 .left-item .artile-tag {
@@ -420,6 +421,11 @@ span.tag-content {
 @media screen and (max-width: 1080px) {
     .screen-content {
         height: 1000px;
+    }
+
+    .left-item .article-content {
+        max-height: 370px;
+        -webkit-line-clamp: 6;
     }
 
     .main-content {

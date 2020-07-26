@@ -93,6 +93,13 @@ body {
 	color: #666666;
 }
 
+.global-comment-container {
+	display: flex;
+	justify-content: center;
+	background: #FFFFFF;
+	margin-top: -20px;
+}
+
 @media screen and (max-width: 1080px) {
 	.screen-content {
 		height: 1000px;
@@ -124,4 +131,8 @@ body {
 		line-height: 4.5rem;
 		letter-spacing: 3px;
 	}
+	.global-comment-container {
+		background: none;
+	}
+
 }

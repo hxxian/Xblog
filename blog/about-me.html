@@ -1,128 +1,135 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<!-- 页面标签图标 -->
-		<link rel="icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon" />
-		<!-- CDN css文件 -->
-		<!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
-		<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
-		<link rel="stylesheet" type="text/css" href="css/H-ui.reset.css" />
+<head>
+    <meta charset="utf-8"/>
+    <!-- 页面标签图标 -->
+    <link rel="icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/blog-icon.jpg" type="image/x-icon"/>
+    <!-- CDN css文件 -->
+    <!-- <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/gooey.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/H-ui.reset.css"/>
 
-		<!-- 项目css -->
-		<link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900" />
-		<link rel="stylesheet" type="text/css" href="css/about-me.css" />
-		<link rel="stylesheet" type="text/css" href="css/anim.css" />
-		<title>关于我 | 浮晓悠羡</title>
-	</head>
-	<body>
-		<div class="container-fluid" id="bloger">
-			<!-- 顶部导航 -->
-			<nav-menu></nav-menu>
-			<!-- 圆形悬浮导航 -->
-			<float-nav-menu></float-nav-menu>
+    <!-- 项目css -->
+    <link rel="stylesheet" type="text/css" href="css/common.css?v=20200625165900"/>
+    <link rel="stylesheet" type="text/css" href="css/about-me.css"/>
+    <link rel="stylesheet" type="text/css" href="css/anim.css"/>
+    <title>关于我 | 浮晓悠羡</title>
+</head>
+<body>
+<div class="container-fluid" id="bloger">
+    <!-- 顶部导航 -->
+    <nav-menu></nav-menu>
+    <!-- 圆形悬浮导航 -->
+    <float-nav-menu></float-nav-menu>
 
-			<div class="screen-content">
-				<!-- 标题内容 -->
-				<div class="blog-title">
-					<div class="blog-name">
-						<span>关于我</span>
-						<div class="title-line">
+    <div class="screen-content">
+        <!-- 标题内容 -->
+        <div class="blog-title">
+            <div class="blog-name">
+                <span>关于我</span>
+                <div class="title-line">
 
-						</div>
-					</div>
-				</div>
-			</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<div class="header-motto-box">
-				<div class="head-motto col-md-4 col-sm-8">
-					<p id="motto" v-html="diaryContent"></p>
-					<span>——{{diaryDate}}</span>
-				</div>
-			</div>
+    <div class="header-motto-box">
+        <div class="head-motto col-md-4 col-sm-8">
+            <p id="motto" v-html="diaryContent"></p>
+            <span>——{{diaryDate}}</span>
+        </div>
+    </div>
 
-			<div class="main-content">
+    <div class="main-content">
 
-				<div class="about-content col-lg-7 col-sm-11">
+        <div class="about-content col-lg-7 col-sm-11">
 
-					<div class="content-item">
-						<div class="title">1.Self Introduction</div>
-						<div class="desc">
-							<p><span>&#10022&nbsp;</span>理工男，程序员一枚，坐标广州。</p>
-							<p><span>&#10022&nbsp;</span>现就职于一家专注于做图像音视频处理应用的公司，从事Android开发、后端服务开发。</p>
-						</div>
-					</div>
+            <div class="content-item">
+                <div class="title">1.Self Introduction</div>
+                <div class="desc">
+                    <p><span>&#10022&nbsp;</span>理工男，程序员一枚，坐标广州。</p>
+                    <p><span>&#10022&nbsp;</span>现就职于一家专注于做图像音视频处理应用的公司，从事Android开发、后端服务开发。</p>
+                </div>
+            </div>
 
-					<div class="content-item">
-						<div class="title">2.Skills Stack</div>
-						<div class="desc">
-							<p><span>&#10022&nbsp;</span>Java后端开发，技术栈主要包含：Spring、MySQL、Redis、微服务、网络编程Netty。</p>
-							<p><span>&#10022&nbsp;</span>Android应用开发，专注于图像处理、音视频处理领域，技术栈主要包含：Android Framework、OpenGL、GLSL。</p>
-							<p><span>&#10022&nbsp;</span>Web前端，技术栈包含：JavaScript、HTML、CSS、Jquery、Vue等，非专职，仅应付个人博客网站开发。</p>
-						</div>
-					</div>
+            <div class="content-item">
+                <div class="title">2.Skills Stack</div>
+                <div class="desc">
+                    <p><span>&#10022&nbsp;</span>Java后端开发，技术栈主要包含：Spring、MySQL、Redis、微服务、网络编程Netty。</p>
+                    <p><span>&#10022&nbsp;</span>Android应用开发，专注于图像处理、音视频处理领域，技术栈主要包含：Android Framework、OpenGL、GLSL。</p>
+                    <p><span>&#10022&nbsp;</span>Web前端，技术栈包含：JavaScript、HTML、CSS、Jquery、Vue等，非专职，仅应付个人博客网站开发。</p>
+                </div>
+            </div>
 
-					<div class="content-item">
-						<div class="title">3.Contact Information</div>
-						<div class="desc">
-							<p><span>&#10022&nbsp;</span>Email: 363756222@qq.com</p>
-							<p><span>&#10022&nbsp;</span>QQ: 363756222</p>
-							<p><span>&#10022&nbsp;</span>WeChat: 舞零 (wx_wuling)</p>
-						</div>
-					</div>
+            <div class="content-item">
+                <div class="title">3.Contact Information</div>
+                <div class="desc">
+                    <p><span>&#10022&nbsp;</span>Email: 363756222@qq.com</p>
+                    <p><span>&#10022&nbsp;</span>QQ: 363756222</p>
+                    <p><span>&#10022&nbsp;</span>WeChat: 舞零 (wx_wuling)</p>
+                </div>
+            </div>
 
-					<div class="content-item">
-						<div class="title">4.Blog Content</div>
-						<div class="desc">
-							<p><span>&#10022&nbsp;</span>Java后端领域相关技术文章</p>
-							<p><span>&#10022&nbsp;</span>Android领域相关技术文章</p>
-							<p><span>&#10022&nbsp;</span>图像音视频领域相关技术文章</p>
-							<p><span>&#10022&nbsp;</span>OpenGL相关技术文章</p>
-							<p><span>&#10022&nbsp;</span>个人心得分享与工作记录</p>
-						</div>
-					</div>
+            <div class="content-item">
+                <div class="title">4.Blog Content</div>
+                <div class="desc">
+                    <p><span>&#10022&nbsp;</span>Java后端领域相关技术文章</p>
+                    <p><span>&#10022&nbsp;</span>Android领域相关技术文章</p>
+                    <p><span>&#10022&nbsp;</span>图像音视频领域相关技术文章</p>
+                    <p><span>&#10022&nbsp;</span>OpenGL相关技术文章</p>
+                    <p><span>&#10022&nbsp;</span>个人心得分享与工作记录</p>
+                </div>
+            </div>
 
-					<div class="content-item">
-						<div class="title">5.Motto</div>
-						<div class="desc">
-							<p><span>&#10022&nbsp;</span>写博客的初衷：分享与成长。</p>
-							<p><span>&#10022&nbsp;</span>创作与学习是互补的，因为学习而想创作，因为创作而想学习。</p>
-							<p><span>&#10022&nbsp;</span>人生漫漫，学无止境。</p>
-							<p><span>&#10022&nbsp;</span>开挂的人生，都离不开自律。</p>
-						</div>
-					</div>
+            <div class="content-item">
+                <div class="title">5.Motto</div>
+                <div class="desc">
+                    <p><span>&#10022&nbsp;</span>写博客的初衷：分享与成长。</p>
+                    <p><span>&#10022&nbsp;</span>创作与学习是互补的，因为学习而想创作，因为创作而想学习。</p>
+                    <p><span>&#10022&nbsp;</span>人生漫漫，学无止境。</p>
+                    <p><span>&#10022&nbsp;</span>开挂的人生，都离不开自律。</p>
+                </div>
+            </div>
 
-				</div>
+        </div>
 
-			</div>
-			
-			<!-- 回顶部按钮 -->
-			<back-top></back-top>
+        <div class="global-comment-container col-lg-7 col-sm-11">
+            <comment></comment>
+        </div>
 
-			<!--页脚  -->
-			<nav-footer></nav-footer>
-		</div>
-		<!-- CDN js依赖文件 -->
-		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
-		<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </div>
 
-		<!-- 项目js -->
-		<script src="js/gooey.min.js"></script>
-		<script src="layer/layer.js"></script>
 
-		<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
 
-		<script src="components/nav-menu.js"></script>
-		<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
-		<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
+    <!-- 回顶部按钮 -->
+    <back-top></back-top>
+
+    <!--页脚  -->
+    <nav-footer></nav-footer>
+</div>
+<!-- CDN js依赖文件 -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.5.22/vue.js"></script>
+<script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<!-- 项目js -->
+<script src="js/gooey.min.js"></script>
+<script src="layer/layer.js"></script>
+
+<script type="text/javascript">document.write('<script src="js/router.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+
+<script src="components/nav-menu.js"></script>
+<script src="components/nav-footer.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/back-top.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/float-nav-menu.js" type="text/javascript" charset="utf-8"></script>
+<script src="components/comment.js" type="text/javascript" charset="utf-8"></script>
 
 <!--		<script src="js/comment.js"></script>-->
-		<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
-		<script src="js/about-me.js"></script>
-	</body>
+<script type="text/javascript">document.write('<script src="js/common.js?timestamp=' + new Date().getTime() + '" type="text/javascript" charset="utf-8"><\/script>');</script>
+<script src="js/about-me.js"></script>
+</body>
 </html>
