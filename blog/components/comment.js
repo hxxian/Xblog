@@ -36,6 +36,13 @@ $(function () {
                 $(".bottom-send-box").addClass("top-leave");
             },
             submitComment: function () {
+
+                if (this.nickname == null || this.nickname == ''
+                    || this.commentContent == null || this.commentContent == '') {
+                    alert("昵称和评论内容不能为空哦~")
+                    return;
+                }
+
                 let data = {
                     articleId: articleId,
                     replyCommentId: this.currCommentId,
@@ -54,6 +61,12 @@ $(function () {
                 })
             },
             replyComment: function () {
+                if (this.replyNickname == null || this.replyNickname == ''
+                    || this.replyContent == null || this.replyContent == '') {
+                    alert("昵称和评论内容不能为空哦~")
+                    return;
+                }
+
                 let data = {
                     articleId: articleId,
                     replyCommentId: this.currSelectCommentId,
@@ -66,7 +79,6 @@ $(function () {
                 addComment(data).then(res => {
                     // 发表评论成功
                     if (res) {
-                        // TODO 重新加载回复列表
                         $(".bottom-send-box").removeClass("bottom-enter");
                         $(".bottom-send-box").addClass("top-leave");
                         this.getComments();
@@ -140,7 +152,6 @@ var commentHtml =
             <div class="bottom-send-box">
                 <div class="comment-container">
                     <div class="comment-send-box col-lg-12">
-<!--                        <img src="img/me.jpg"/>-->
                         <div class="comment-inputs">
                             <div class="flex-row content-between">
                                 <input v-model="replyNickname" class="form-control" placeholder="*昵称"/>

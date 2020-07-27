@@ -823,6 +823,6 @@ body {
     }
 
     .comments-session {
-        border-bottom: 3px solid #dddddd;
+        border-bottom: 3px dashed #cccccc;
     }
 }

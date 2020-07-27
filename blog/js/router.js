@@ -1,4 +1,4 @@
-var DEBUG = true;
+var DEBUG = false;
 var basePath = DEBUG ? "http://127.0.0.1:8181/" : "https://www.hxxian.cn:448/xbloger/";
 
 /**
